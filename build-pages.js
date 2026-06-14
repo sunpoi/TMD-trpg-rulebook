@@ -5,7 +5,6 @@ const cheerio = require("cheerio");
 const TurndownService = require("turndown");
 const turndownPluginGfm = require("turndown-plugin-gfm");
 
-// 初始化 Turndown
 const turndownService = new TurndownService({
   headingStyle: "atx",
   codeBlockStyle: "fenced",
@@ -20,11 +19,11 @@ turndownService.addRule("unwrapGarbage", {
 
 const sourceDir = "./";
 const outputDir = "./docs";
-const allPagesData = []; // 用于存放搜索数据库
+const allPagesData = [];
 
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-// 核心路径净化函数（确保与 build-toc.js 100% 一致）
+// 核心路径净化函数
 function sanitizePath(p) {
   let res = p;
   try {
@@ -36,7 +35,9 @@ function sanitizePath(p) {
     .map((part) => part.trim())
     .join("/");
   res = res.replace(/[^\u4e00-\u9fa5a-zA-Z0-9\/\.]/g, "_").replace(/_+/g, "_");
-  return res;
+
+  // ====== 终极杀招：全部强制转为小写 ======
+  return res.toLowerCase();
 }
 
 function processDirectory(dir) {
@@ -49,20 +50,21 @@ function processDirectory(dir) {
 
     if (stat.isDirectory()) {
       processDirectory(fullPath);
-    } else if (fullPath.endsWith(".html") || fullPath.endsWith(".htm")) {
-      cleanHtmlFile(fullPath);
-    } else if (
-      fullPath.endsWith(".jpg") ||
-      fullPath.endsWith(".png") ||
-      fullPath.endsWith(".gif")
-    ) {
-      copyFile(fullPath);
+    } else if (stat.isFile()) {
+      // ====== 增强版：不区分大小写抓取所有图片和网页 ======
+      const ext = path.extname(fullPath).toLowerCase();
+      if ([".html", ".htm"].includes(ext)) {
+        cleanHtmlFile(fullPath);
+      } else if (
+        [".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp"].includes(ext)
+      ) {
+        copyFile(fullPath);
+      }
     }
   });
 }
 
 function cleanHtmlFile(filePath) {
-  // 1. 智能判断编码
   const buffer = fs.readFileSync(filePath);
   let htmlContent = "";
   const headStr = buffer.slice(0, 1024).toString("ascii").toLowerCase();
@@ -81,7 +83,6 @@ function cleanHtmlFile(filePath) {
   const $ = cheerio.load(htmlContent);
   $("script, style, iframe").remove();
 
-  // 2. 修复图片路径
   $("img").each((i, el) => {
     let src = $(el).attr("src");
     if (src && !src.startsWith("http") && !src.startsWith("data:")) {
@@ -97,7 +98,6 @@ function cleanHtmlFile(filePath) {
     }
   });
 
-  // 3. 修复内部跳转链接 <a>
   $("a").each((i, el) => {
     let href = $(el).attr("href");
     if (
@@ -109,32 +109,28 @@ function cleanHtmlFile(filePath) {
       let [pathPart, hashPart] = href.split("#");
       if (pathPart) {
         pathPart = sanitizePath(pathPart);
-        pathPart = pathPart.replace(/\.html?$/i, ".md"); // 替换后缀
+        pathPart = pathPart.replace(/\.html?$/i, ".md");
       }
       href = hashPart ? `${pathPart}#${hashPart}` : pathPart;
       $(el).attr("href", href);
     }
   });
 
-  // 4. 提取并转换 Markdown
   let bodyContent = $("body").html() || htmlContent;
   let markdownContent = turndownService.turndown(bodyContent);
 
-  // 5. 准备输出路径
   const relativePath = path.relative(sourceDir, filePath);
-  let newRelativePath = relativePath.replace(/\.html?$/, ".md");
-  newRelativePath = sanitizePath(newRelativePath); // 净化输出路径
+  let newRelativePath = relativePath.replace(/\.html?$/i, ".md");
+  newRelativePath = sanitizePath(newRelativePath);
 
   const outPath = path.join(outputDir, newRelativePath);
   const outDirName = path.dirname(outPath);
   if (!fs.existsSync(outDirName)) fs.mkdirSync(outDirName, { recursive: true });
 
-  // 6. 写入 Markdown 文件
   const pageTitle = path.basename(filePath, path.extname(filePath));
   const finalContent = `# ${pageTitle}\n\n${markdownContent}`;
   fs.writeFileSync(outPath, finalContent, "utf-8");
 
-  // 7. 提取纯文本，存入搜索数据库
   const plainText = markdownContent
     .replace(/[#*`>|]/g, "")
     .replace(/\s+/g, " ");
@@ -149,7 +145,7 @@ function cleanHtmlFile(filePath) {
 
 function copyFile(filePath) {
   const relativePath = path.relative(sourceDir, filePath);
-  const newRelativePath = sanitizePath(relativePath); // 净化图片输出路径
+  const newRelativePath = sanitizePath(relativePath);
   const outPath = path.join(outputDir, newRelativePath);
 
   const outDirName = path.dirname(outPath);
@@ -161,7 +157,6 @@ function copyFile(filePath) {
 console.log("🚀 开始批量清洗数据...");
 processDirectory(sourceDir);
 
-// 8. 生成专属搜索数据库
 const publicDir = path.join(outputDir, "public");
 if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 fs.writeFileSync(
@@ -169,5 +164,4 @@ fs.writeFileSync(
   JSON.stringify(allPagesData),
   "utf-8",
 );
-
 console.log("🎉 全部清洗完成！专属搜索数据库 search-db.json 已生成！");
