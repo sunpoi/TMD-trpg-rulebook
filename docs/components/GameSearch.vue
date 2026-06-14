@@ -26,13 +26,42 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const keyword = ref("");
 const results = ref([]);
 const isSearching = ref(false);
 const hasSearched = ref(false);
-let searchDB = null; // 缓存数据库
+
+// 全局缓存变量
+let searchDB = null;
+let dbFetchPromise = null; // 核心：请求锁
+
+// 获取数据库的核心函数（带单例锁）
+const getSearchDB = () => {
+  if (searchDB) return Promise.resolve(searchDB); // 如果已经有了，直接返回
+  if (dbFetchPromise) return dbFetchPromise; // 如果正在下载中，返回同一个 Promise，让大家一起等，绝不重复发请求！
+
+  // 发起请求并上锁
+  dbFetchPromise = fetch("/search-db.json")
+    .then((res) => res.json())
+    .then((data) => {
+      searchDB = data;
+      return data;
+    })
+    .catch((err) => {
+      console.error("获取搜索数据失败:", err);
+      dbFetchPromise = null; // 失败后把锁解开，允许重试
+      return [];
+    });
+
+  return dbFetchPromise;
+};
+
+// 魔法优化：当用户一进入搜索页面，趁他打字的时间，偷偷在后台预加载数据！
+onMounted(() => {
+  getSearchDB();
+});
 
 const doSearch = async () => {
   if (!keyword.value.trim()) return;
@@ -43,17 +72,14 @@ const doSearch = async () => {
   // 延迟 50ms，让浏览器的 Loading 动画先渲染出来
   await new Promise((resolve) => setTimeout(resolve, 50));
 
-  // 懒加载数据库（只在第一次搜索时请求）
-  if (!searchDB) {
-    const res = await fetch("/search-db.json");
-    searchDB = await res.json();
-  }
+  // 等待数据库加载完成（如果预加载好了，这里是瞬间通过的）
+  const db = await getSearchDB();
 
   const kw = keyword.value.trim().toLowerCase();
   const tempResults = [];
 
   // 简单粗暴但极速的遍历匹配
-  for (const page of searchDB) {
+  for (const page of db) {
     const titleMatch = page.title.toLowerCase().includes(kw);
     const contentIndex = page.content.toLowerCase().indexOf(kw);
 

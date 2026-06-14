@@ -113,9 +113,24 @@ function cleanHtmlFile(filePath) {
 
   // 5. 准备输出路径
   const relativePath = path.relative(sourceDir, filePath);
-  const newRelativePath = relativePath
-    .replace(/\.html?$/, ".md")
-    .replace(/\s+/g, "_");
+  let newRelativePath = relativePath.replace(/\.html?$/, ".md");
+
+  try {
+    newRelativePath = decodeURIComponent(newRelativePath);
+  } catch (e) {}
+
+  // 统一斜杠并去空格
+  newRelativePath = newRelativePath.replace(/\\/g, "/");
+  newRelativePath = newRelativePath
+    .split("/")
+    .map((part) => part.trim())
+    .join("/");
+
+  // 核弹级替换
+  newRelativePath = newRelativePath
+    .replace(/[^\u4e00-\u9fa5a-zA-Z0-9\/\.]/g, "_")
+    .replace(/_+/g, "_");
+
   const outPath = path.join(outputDir, newRelativePath);
 
   const outDirName = path.dirname(outPath);
@@ -146,7 +161,7 @@ function cleanHtmlFile(filePath) {
 
 // 复制图片的逻辑
 function copyFile(filePath) {
-  const relativePath = path.relative(sourceDir, filePath); 
+  const relativePath = path.relative(sourceDir, filePath);
   // ====== 修改：把图片文件名和路径里的空格替换成下划线 ======
   const newRelativePath = relativePath.replace(/\s+/g, "_");
   const outPath = path.join(outputDir, relativePath);
