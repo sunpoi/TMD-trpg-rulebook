@@ -20,6 +20,8 @@ export default defineConfig({
   title: "TMD规则书", // 你的 App 名字
   description: "CHM 转换的现代 Web App",
 
+  cleanUrls: true,
+
   // 忽略死链接
   ignoreDeadLinks: true,
 
