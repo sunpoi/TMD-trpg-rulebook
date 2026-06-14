@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>平均数计算器</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>TMD：新秩序000</TD></TR></TBODY></TABLE></DIV>
+<DIV id=titlerow>
+<H1 class=dtH1>平均数计算器</H1></DIV></DIV>
+<DIV id=nstext><BR>
+<DIV class="fn_part fn_sfz mod_box_t1" 
+style="HEIGHT: auto !important; MIN-HEIGHT: 0px !important">
+<DIV class=hd>
+<H2>算术平均值在线计算器</H2>
+<P>在下框内输入数字，使用半角英文符号分割。</P></DIV>
+<DIV class=bd style="HEIGHT: auto !important">
+<DIV class="mod_box_t3 fn_box">
+<DIV class=box_con>
+<DIV class=mathmod_form>
+<SCRIPT type=text/javascript>
+function calculate() {
+	var x = document.getElementById("inputs").value;
+	x=x.replace(' ','');
+	var arr=x.split(',');
+	
+	var lcm=0;
+	var flag=false;
+	var total=0;
+	for(var j=0;j<arr.length;j++){
+		arr[j]=parseFloat(arr[j]);
+		total+=arr[j];
+	}
+	var mean=total/arr.length;
+	mean=Math.round(mean*10000)/10000;
+	document.getElementById("res_area").style.visibility = "visible";
+	document.getElementById("result1").value = arr.length;
+	document.getElementById("result2").value = mean;
+}
+</SCRIPT>
+
+<TABLE style="WIDTH: 100%; MARGIN: 0px">
+  <TBODY>
+  <TR>
+    <TD vAlign=top><LABEL><BR></LABEL></TD>
+    <TD>
+      <P align=left><LABEL><TEXTAREA id=inputs style="HEIGHT: 60px; WIDTH: 283px" rows=3 cols=5>5,20,40,80,100</TEXTAREA></LABEL></P></TD></TR>
+  <TR>
+    <TD colSpan=2 align=center>
+      <P align=left><INPUT onclick=calculate() id=button class=calc type=button value=计算>输入完成后点击计算即可</P></TD>
+    <TD></TD></TR></TBODY></TABLE>
+<DIV id=res_area>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD colSpan=2><FONT id=res class=output>结果：</FONT></TD></TR>
+  <TR>
+    <TD><LABEL>数字个数：</LABEL></TD>
+    <TD><INPUT id=result1 class=result> <LABEL id=unit></LABEL></TD></TR>
+  <TR>
+    <TD><LABEL>平均值：</LABEL></TD>
+    <TD><INPUT id=result2 class=result> <LABEL 
+id=unit></LABEL></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV></DIV>
+<P>&nbsp;</P></DIV>
+<DIV id=nstext>
+<HR>
+</DIV>
+<DIV class=footer>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy; 2022 <A 
+href="http://www.goddessfantasy.net/bbs/index.php?board=2008.0" 
+target=_blank>TMDtrpg制作组</A>. All Rights Reserved. </P></DIV></BODY></HTML>

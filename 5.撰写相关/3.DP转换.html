@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><title>3.DP转换</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>TMD：新秩序006</TD></TR></TBODY></TABLE></DIV>
+<DIV id=titlerow>
+<H1 class=dtH1>DP转换</H1></DIV></DIV>
+<DIV id=nstext><BR>
+<P><FONT size=2>※转化对应表&nbsp;<BR><BR>1DP=1任意检定加值=1防御（任意类型，包括盔甲、格挡、掩蔽等）=意志、强韧、反射豁免检定各+1=单项豁免检定+2。<BR>1DP=扩大3点通用能量池<BR>2DP=1.5武器伤害提升（不含税）<BR>1DP=1高速/破甲=1破魔=1威猛&nbsp;&nbsp;但4DP=5某种破防（已含税）<BR>1DP=2先攻<BR></FONT><FONT size=2>1.5DP=1瞄准上限（含税）&nbsp;<BR>1DP=增加某个医疗类能力的8点医疗点数。&nbsp;<BR>1DP=5声望<BR></FONT><FONT size=2>2DP=1点机运骰加值
+<BR>1DP=3虚拟体积（不提供生命值）
+<br>4DP=1全检定加值=5外貌（1dp=1外貌，满4送1），这一特性的税会在每购买3点全检定加值时一并收取
+<br>3dp=熔毁2（含税），每购买4点熔毁送1点。
+<br>3dp=1点意志力用法为检定提供的加值提升
+<br>3dp=攻击命中后1点意志力流失
+<br>1dp=1点任意能量流失=4点指定能量流失
+<br>6dp=5点指定破防属性，若该破防属性结算后仍有剩余则转化为攻击上的xx加值，至多转化5点。
+<br>1dp=3点指定破防属性转化（在进行攻击前指定一种破防属性将其转化为另一种破防属性）
+<br>1dp=2抵消破甲/高速/破魔/威猛
+1dp=抵消2点在范围攻击中避开单位时需受到的减值
+<BR>在DP转换过程中，对于以上特性每有3DP被用于同种散特性可购买的能力中（如攻击DP，防御等，不包括提升属性、瞄准上限、扩大能量池、声望）就需抽走1DP税<BR><BR>—————————————————<BR><BR><BR>3DP=1附加成功=1.5生命上限=1.5意志池上限=1.5临时生命（默认一场景刷新）=1招架伤害抵消=1快速治疗（并自带12点医疗点数）=0.75全伤害吸收=0.75异常点数吸收=1.2DR/-=1.2全能量抗力=2.5单能量抗力=2某类型物理伤害吸收=1.5DR/某类型（DR/魔法可以视为2.5，因为法破特性太便宜了）=1.2封闭=1吸血<BR>6DP=1异常点治疗（并自带24点医疗点数）<BR><BR>3DP=提升1技能等级</FONT></P>
+<P><FONT size=2><BR>1韧性伤害=1.5严重伤害，将1点严重伤害转为韧性为3DP。&nbsp;&nbsp;<BR>
+<BR>2DP=基因锁其中一个骰子加1成功数<BR>
+<br>2.5dp=1近战伤害吸收=1远程伤害吸收
+<br>3dp=2点指定异常点数恢复（医疗点12）
+<br>1dp=每场景一次，忍耐2点指定异常点数至战斗结束后生效
+<BR>2.5DP=1体积
+<br>2dp=狂怒1
+<br>3DP=1点某伤害性质易伤
+<br>2dp=1点伤害降低一级 （冲击-严重-韧性）
+<br>3dp=1点活体护甲
+<br>3dp=2点抵消意志力流失效果
+<BR>对于以上特性每有1个同级特性被用于同种散特性可购买的能力中（包括全吸收、生命等，不包括提升技能、外貌，载具模板购买体积无需交税），就需抽走1DP税。特殊的是购买附加成功、伤害、异常点无需抽税
+<br>
+<BR><BR>————————————————<BR>放弃韧性槽，将生命槽转化组织度/结构值免费,转化为1.5倍生命值的结构值18dp（12税）&nbsp;
+
+<BR><BR></FONT><FONT size=2>速度与射程计算：<BR></P></FONT>
+<P>
+<TABLE class=MsoNormal 
+style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext; mso-cellspacing: 1.5pt" 
+cellPadding=0 border=1>
+  <TBODY>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">阶数</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">等级</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">距离</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">范例</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">1</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">极近</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">接触<SPAN 
+      lang=EN-US>~2</SPAN>米内</SPAN><SPAN lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">以肉搏、白刃武器进行攻击</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">2</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">近</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">3~15</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米内</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">以投掷、特殊白刃武器（如鞭）进行攻击</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">3</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">中</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">16~50</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">以弓箭、手枪类进行攻击</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">4</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">远</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">51~150</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">以步枪类进行攻击</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">5</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">极远</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">151~500</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">以反器材狙击枪进行攻击</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">6</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">以上</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">501~1500~3500~6500~…</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                         style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"    >
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">强化获得。区间步长逐步上升</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE></P>
+<P><FONT size=2>根据资源等级，决定DP换算射程和移速的比例，并且</FONT></P>
+<P>
+<TABLE class=MsoNormal 
+style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext; mso-cellspacing: 1.5pt" 
+cellPadding=0 border=1>
+  <TBODY>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 27.1pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=36>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">等级</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">DP</SPAN></B><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">换算通用射程</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 63.25pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=84>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">单特性通用射程</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 57.5pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=77>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">DP</SPAN></B><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">换算技艺射程<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 51.7pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=69>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">单特性技艺射程<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">DP</SPAN></B><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">换算移速</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.4pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=89>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=center><B><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">单特性移速</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></B></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 27.1pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=36>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">D</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">1</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 63.25pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=84>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">3</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 57.5pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=77>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">5</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 51.7pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=69>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">15</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">5</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.4pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=89>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">15</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 27.1pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=36>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">C</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">2</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 63.25pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=84>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">12</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 57.5pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=77>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">5</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 51.7pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=69>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">30</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">5</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.4pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=89>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">30</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 27.1pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=36>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">B</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">5</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 63.25pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=84>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">60</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 57.5pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=77>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">5</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 51.7pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=69>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">60</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">10</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.4pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=89>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">120</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 27.1pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=36>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">A</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">20</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 63.25pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=84>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">480</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 57.5pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=77>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">20</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 51.7pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=69>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">480</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">20</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.4pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=89>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">480</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes">
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 27.1pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=36>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">S</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">50</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 63.25pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=84>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">2400</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 57.5pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=77>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">50</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 51.7pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=69>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">2400</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米<SPAN 
+      lang=EN-US><o:p></o:p></SPAN></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.3pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=88>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">50</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD>
+    <TD                                                                                                                                                                                                                                                                                                                                     style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; WIDTH: 66.4pt; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt"     width=89>
+      <P class=MsoNormal 
+      style="TEXT-ALIGN: left; MARGIN: 0cm; mso-pagination: widow-orphan" 
+      align=left><SPAN lang=EN-US 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">2400</SPAN><SPAN 
+      style="FONT-SIZE: 12pt; FONT-FAMILY: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt; mso-bidi-language: AR">米</SPAN><SPAN 
+      lang=EN-US><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE></P>
+<P><FONT size=2>注：通用射程是指近战武器的攻击射程、人物的触及范围等比较通用的涉及射程相关的购买方式。技艺射程是指基于新建攻击的初始15米基础射程，只能用于技艺中购买射程，并且不与通用射程叠加。<BR>1、在基础模板的基础上，射程跨阶需要至少高出等于【阶数差】的支线等级（D1~S5）。例如，基于狙击枪（200米）撰写跨阶至区间501~1500米的狙击枪，则该狙击枪至少是D级；基于白刃撰写跨阶至100米的飞剑，则该飞剑至少是B级。这只关系到物品/技艺定价的等级。 
+<BR>2、对于远程而言，每在模板的基础射程上增加1个基础射程，就需要相当于3DP的特性；或者根据物品等级查找DP换算射程表，获得的射程取高。特殊的，对于步枪和狙击枪无法3DP增加1个基础射程，而是被1DP=10米的买法取代。<BR>3、对于近战而言，根据资源等级查找DP换算射程表。 
+<BR>4、对于可以影响一定范围的能力而言，其能力的范围购买方式为：线形（或者宽度为1米的长方形）=1倍同级射程的长度；扇形、锥形（或者宽度不大于长度一半的长方形）=0.5倍同级射程的半径（或长度），圆形（或者宽度大于等于长度一半的长方形）=0.25倍同级射程的半径（或长度）。举例而言，A级的一个影响范围能力，可以花费1DP购买20米线形长度，或者10米锥形半径，或者5米圆形半径。 
+<BR>在圆形的基础上，每支付3DP，可以让数值上升一档（即在1/4圆形时支付2DP，可以换成数值1/2的圆形，再支付3DP可以变为该数值的圆形）；此外，如果这个效果是对队友使用的buff，则该数值每有12DP，就要额外支付1DP税。对于持续时间达到一定程度（也即是说，可以通过多次施展来达到实质上作用于多个单位目的）的能力，也需要依照此方式购买范围。</FONT></P>
+<P><FONT size=2></FONT>&nbsp;</P></DIV>
+<DIV id=nstext>
+<HR>
+</DIV>
+<DIV class=footer>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright ? 2022 <A 
+href="http://www.goddessfantasy.net/bbs/index.php?board=2008.0" 
+target=_blank>TMDtrpg制作组</A>. All Rights Reserved. </P></DIV></BODY></HTML>

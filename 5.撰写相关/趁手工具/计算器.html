@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>计算器</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>TMD：新秩序004</TD></TR></TBODY></TABLE></DIV>
+<DIV id=titlerow>
+<H1 class=dtH1>计算器</H1></DIV></DIV>
+<DIV id=nstext>
+<FORM name=计算器>
+<META name=content-type content="text/html; charset=UTF-8"><!--将按键内容以字符串形式存储在文字框中当按钮为“=”时，调用eval方法计算结果然后将结果输出文字框中-->
+<SCRIPT type=text/javascript>
+      var numresult;
+      var str;
+      
+      function onclicknum(nums) {
+  
+          str = document.getElementById("nummessege");
+          str.value = str.value + nums;
+  
+      }
+  
+      function onclickclear() {
+  
+          str = document.getElementById("nummessege");
+          str.value = "";
+  
+      }
+  
+      function onclickresult() {
+  
+          str = document.getElementById("nummessege");
+          numresult = eval(str.value);
+          str.value = numresult;
+          
+      }
+  </SCRIPT>
+<!--定义按键表格,每个按键对应一个事件触发-->
+<TABLE style="HEIGHT: 350px; WIDTH: 270px" align=center bgColor=#bbff77 
+border=1>
+  <TBODY>
+  <TR>
+    <TD colSpan=4><INPUT id=nummessege 
+      style="FONT-SIZE: 50px; HEIGHT: 90px; WIDTH: 350px"> </TD></TR>
+  <TR>
+    <TD><INPUT onclick=onclicknum(1) id=1 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=1> 
+    </TD>
+    <TD><INPUT onclick=onclicknum(2) id=2 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=2> 
+    </TD>
+    <TD><INPUT onclick=onclicknum(3) id=3 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=3> 
+    </TD>
+    <TD><INPUT onclick="onclicknum('+')" id=add style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=+> 
+    </TD></TR>
+  <TR>
+    <TD><INPUT onclick=onclicknum(4) id=4 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=4> 
+    </TD>
+    <TD><INPUT onclick=onclicknum(5) id=5 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=5> 
+    </TD>
+    <TD><INPUT onclick=onclicknum(6) id=6 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=6> 
+    </TD>
+    <TD><INPUT onclick="onclicknum('-')" id=sub style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=-> 
+    </TD></TR>
+  <TR>
+    <TD><INPUT onclick=onclicknum(7) id=7 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=7> 
+    </TD>
+    <TD><INPUT onclick=onclicknum(8) id=8 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=8> 
+    </TD>
+    <TD><INPUT onclick=onclicknum(9) id=9 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=9> 
+    </TD>
+    <TD><INPUT onclick="onclicknum('*')" id=mul style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=*> 
+    </TD></TR>
+  <TR>
+    <TD colSpan=2><INPUT onclick=onclicknum(0) id=0 style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 190px" type=button value=0> 
+    </TD>
+    <TD><INPUT onclick="onclicknum('.')" id=point style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=.> 
+    </TD>
+    <TD><INPUT onclick="onclicknum('/')" id=division style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 90px" type=button value=/> 
+    </TD></TR>
+  <TR>
+    <TD colSpan=2><INPUT onclick=onclickclear() id=clear style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 190px" type=button value=Del> 
+    </TD>
+    <TD colSpan=2><INPUT onclick=onclickresult() id=result style="FONT-SIZE: 35px; HEIGHT: 70px; WIDTH: 190px" type=button value==> 
+    </TD></TR></TBODY></TABLE>
+<DIV id=nstext></DIV>
+<DIV class=footer>
+<DIV id=nstext>
+<HR>
+</DIV>
+<DIV class=footer>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy; 2022 <A 
+href="https://www.baidu.com" target=_blank>TMDtrpg制作组</A>. All Rights Reserved. 
+</P></DIV></DIV></FORM></DIV></BODY></HTML>

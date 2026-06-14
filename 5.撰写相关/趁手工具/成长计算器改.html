@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><title>成长计算器改</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK rel=stylesheet 
+href="_template.css"></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>TMD：新秩序004</TD></TR></TBODY></TABLE></DIV>
+<DIV id=titlerow>
+<H1 class=dtH1>成长性计算器</H1></DIV></DIV>
+<DIV id=nstext><BR>
+<P><BR>成长方式：<BR>在成长方式的部分中，有这几个影响因素，有无成长上限、成长条件是否是均等、成长结果是否均等。对于成长条件与成长结果都是均等的可以用下面简易计算器计算。</P>
+<P></P><BR>成长条件： <BR><INPUT id=Num1> <BR>成长效果： <BR><INPUT id=Num2> 
+<BR>上限成长多少次（若无则不填）： <BR><INPUT id=Num3> <BR><BR><INPUT id=compute type=button value=计算 onclick="compute()"> （请填写完再点击计算！）<BR><BR>成长特性DP： 
+<INPUT id=Result> </DIV>
+<DIV>&nbsp;</DIV>
+<SCRIPT>
+    var N1 = document.getElementById('Num1');
+    var N2 = document.getElementById('Num2');
+    var N3 = document.getElementById('Num3');
+    var Rst = document.getElementById('Result');
+	var S = 0.986 ;
+    var com = document.getElementById("compute");
+    function compute(){
+        if(N1.value.length == 0 ||N2.value.length == 0){
+            alert("请填写完毕再进行计算！");
+            return false;
+        }
+        else if(N3.value.length == 0){
+        var Result = N2.value/(1-Math.pow(S,N1.value));
+        Rst.value = Result-N2.value;
+        }
+        else{
+		var N4 = N3.value*1+1
+        var Result = N2.value*(1-Math.pow(Math.pow(S,N1.value),N4))/(1- Math.pow(S,N1.value));
+        Rst.value = Result-N2.value;
+        }
+    }
+</SCRIPT>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;对于成长条件与成长结果当中有一个或者两个不是均等且有成长上限的，则是用下面计算器计算，按照成长顺序依次从第一级开始填入每次成长的成长条件与成长结果。如果出现成长次数过多，9栏不够用的情况，需要将计算器清零，然后将第一级视为第十级计算，并且在第十级的成长条件需要额外加上前面所有成长的成长条件。<BR>&nbsp;&nbsp;&nbsp; 
+第一级成长条件：<INPUT id=Bum1> 第一级成长效果：<INPUT id=Bum11>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第二级成长条件：<INPUT id=Bum2> 第二级成长效果：<INPUT id=Bum22>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第三级成长条件：<INPUT id=Bum3> 第三级成长效果：<INPUT id=Bum33>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第四级成长条件：<INPUT id=Bum4> 第四级成长效果：<INPUT id=Bum44>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第五级成长条件：<INPUT id=Bum5> 第五级成长效果：<INPUT id=Bum55>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第六级成长条件：<INPUT id=Bum6> 第六级成长效果：<INPUT id=Bum66>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第七级成长条件：<INPUT id=Bum7> 第七级成长效果：<INPUT id=Bum77>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第八级成长条件：<INPUT id=Bum8> 第八级成长效果：<INPUT id=Bum88>&nbsp;<BR>&nbsp;&nbsp;&nbsp; 
+第九级成长条件：<INPUT id=Bum9> 第九级成长效果：<INPUT id=Bum99>&nbsp;<BR><BR>&nbsp;&nbsp;&nbsp; 
+<INPUT id=compute1 type=button value=计算 onclick="compute1()">&nbsp;（请填写完再点击计算！）<BR><BR>&nbsp;&nbsp;&nbsp; 
+成长特性DP： <INPUT id=result1> </P>
+<DIV></DIV>
+<SCRIPT>
+	var com = document.getElementById("compute1");
+    function compute1(){
+	var B1 = document.getElementById('Bum1');
+    var B2 = document.getElementById('Bum2');
+    var B3 = document.getElementById('Bum3');
+	var B4 = document.getElementById('Bum4');
+    var B5 = document.getElementById('Bum5');
+    var B6 = document.getElementById('Bum6');
+	var B7 = document.getElementById('Bum7');
+    var B8 = document.getElementById('Bum8');
+    var B9 = document.getElementById('Bum9');
+    var B11 = document.getElementById('Bum11');	
+	var B22 = document.getElementById('Bum22');
+    var B33 = document.getElementById('Bum33');
+	var B44 = document.getElementById('Bum44');
+    var B55 = document.getElementById('Bum55');
+    var B66 = document.getElementById('Bum66');
+	var B77 = document.getElementById('Bum77');
+    var B88 = document.getElementById('Bum88');
+    var B99 = document.getElementById('Bum99');
+	var S = 0.986 ;
+    var rst = document.getElementById('result1');
+	    if(B1.value.length == 0 ||B11.value.length == 0){
+        alert("请填写完毕再进行计算！");
+        return false;
+        }
+		var arrValue = new Array(B1,B2,B3,B4,B5,B6,B7,B8,B9,B11,B22,B33,B44,B55,B66,B77,B88,B99);
+	    var i=0
+		var ii=arrValue[i].value*1
+		var total = 0;
+		do
+		{
+			if (arrValue[i+9].value.length == 0 ||arrValue[i].value.length == 0)
+				{
+				break;
+				}
+			var result1 = arrValue[i+9].value*(1-Math.pow(Math.pow(S,ii),2))/(1- Math.pow(S,ii))-arrValue[i+9].value;
+			i++;
+			total = total + result1;
+			ii = ii + arrValue[i].value*1;
+		}
+		while(i<=8)
+        rst.value = total;
+    }
+</SCRIPT>
+
+<DIV id=nstext>
+<HR>
+</DIV>
+<DIV class=footer>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright ? 2022 <A 
+href="https://www.baidu.com" target=_blank>TMDtrpg制作组</A>. All Rights Reserved. 
+</P></DIV></BODY></HTML>
