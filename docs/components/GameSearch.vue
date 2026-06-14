@@ -1,94 +1,253 @@
 <template>
   <div class="game-search">
     <div class="search-box">
+      <!-- 1级分区 -->
+      <select
+        v-model="selectedCat1"
+        class="category-select"
+        @change="onCat1Change"
+      >
+        <option value="">📚 全部分区</option>
+        <option v-for="cat in optionsCat1" :key="cat" :value="cat">
+          {{ cat }}
+        </option>
+      </select>
+
+      <!-- 2级分区 -->
+      <select
+        v-if="optionsCat2.length"
+        v-model="selectedCat2"
+        class="category-select"
+        @change="onCat2Change"
+      >
+        <option value="">📂 全部子类</option>
+        <option v-for="cat in optionsCat2" :key="cat" :value="cat">
+          {{ cat }}
+        </option>
+      </select>
+
+      <!-- 3级分区 -->
+      <select
+        v-if="optionsCat3.length"
+        v-model="selectedCat3"
+        class="category-select"
+        @change="onCat3Change"
+      >
+        <option value="">📁 全部细分</option>
+        <option v-for="cat in optionsCat3" :key="cat" :value="cat">
+          {{ cat }}
+        </option>
+      </select>
+
+      <!-- 4级分区 -->
+      <select
+        v-if="optionsCat4.length"
+        v-model="selectedCat4"
+        class="category-select"
+        @change="onCat4Change"
+      >
+        <option value="">📄 全部条目</option>
+        <option v-for="cat in optionsCat4" :key="cat" :value="cat">
+          {{ cat }}
+        </option>
+      </select>
+
       <input
         v-model="keyword"
         @keyup.enter="doSearch"
-        placeholder="输入规则、专长或物品，按回车键全书搜索..."
+        placeholder="输入关键字 (空格隔开可多词匹配)..."
         class="search-input"
       />
       <button @click="doSearch" class="search-btn">搜索</button>
     </div>
 
-    <div v-if="isSearching" class="loading">⏳ 正在全书检索中，请稍候...</div>
+    <!-- 结果区域（加了 min-height 防止闪烁） -->
+    <div class="results-container">
+      <div v-if="isSearching" class="loading">⏳ 正在检索中，请稍候...</div>
 
-    <div v-if="!isSearching && hasSearched" class="result-info">
-      ✅ 找到了 <strong>{{ results.length }}</strong> 条结果：
-    </div>
+      <div v-if="!isSearching && hasSearched" class="result-info">
+        ✅ 在 <strong>{{ currentScopeName }}</strong> 中找到了
+        <strong>{{ results.length }}</strong> 条结果：
+      </div>
 
-    <div class="results-list" v-if="!isSearching">
-      <div v-for="(item, index) in results" :key="index" class="result-item">
-        <a :href="item.link" class="result-title">{{ item.title }}</a>
-        <p class="result-snippet" v-html="highlight(item.snippet)"></p>
+      <div class="results-list" v-if="!isSearching">
+        <div v-for="(item, index) in results" :key="index" class="result-item">
+          <div class="result-breadcrumb" v-if="item.breadcrumb">
+            📂 {{ item.breadcrumb }}
+          </div>
+          <a
+            :href="item.link"
+            class="result-title"
+            v-html="highlight(item.title)"
+          ></a>
+          <p class="result-snippet" v-html="highlight(item.snippet)"></p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 
 const keyword = ref("");
+const selectedCat1 = ref("");
+const selectedCat2 = ref("");
+const selectedCat3 = ref("");
+const selectedCat4 = ref("");
+
 const results = ref([]);
 const isSearching = ref(false);
 const hasSearched = ref(false);
 
-// 全局缓存变量
-let searchDB = null;
-let dbFetchPromise = null; // 核心：请求锁
+// 把数据库变成响应式，方便 computed 计算
+const searchDB = ref([]);
+let dbFetchPromise = null;
 
-// 获取数据库的核心函数（带单例锁）
+const sortFn = (a, b) => (parseInt(a) || 0) - (parseInt(b) || 0);
+
+// 动态计算下拉框的选项
+const optionsCat1 = computed(() => {
+  const set = new Set();
+  searchDB.value.forEach((p) => {
+    if (p.cat1 && p.cat1 !== "其他") set.add(p.cat1);
+  });
+  return Array.from(set).sort(sortFn);
+});
+
+const optionsCat2 = computed(() => {
+  if (!selectedCat1.value) return [];
+  const set = new Set();
+  searchDB.value.forEach((p) => {
+    if (p.cat1 === selectedCat1.value && p.cat2) set.add(p.cat2);
+  });
+  return Array.from(set).sort(sortFn);
+});
+
+const optionsCat3 = computed(() => {
+  if (!selectedCat2.value) return [];
+  const set = new Set();
+  searchDB.value.forEach((p) => {
+    if (
+      p.cat1 === selectedCat1.value &&
+      p.cat2 === selectedCat2.value &&
+      p.cat3
+    )
+      set.add(p.cat3);
+  });
+  return Array.from(set).sort(sortFn);
+});
+
+const optionsCat4 = computed(() => {
+  if (!selectedCat3.value) return [];
+  const set = new Set();
+  searchDB.value.forEach((p) => {
+    if (
+      p.cat1 === selectedCat1.value &&
+      p.cat2 === selectedCat2.value &&
+      p.cat3 === selectedCat3.value &&
+      p.cat4
+    )
+      set.add(p.cat4);
+  });
+  return Array.from(set).sort(sortFn);
+});
+
+// 当前搜索范围的名称展示
+const currentScopeName = computed(() => {
+  return (
+    selectedCat4.value ||
+    selectedCat3.value ||
+    selectedCat2.value ||
+    selectedCat1.value ||
+    "全书"
+  );
+});
+
+// 级联重置逻辑
+const onCat1Change = () => {
+  selectedCat2.value = "";
+  selectedCat3.value = "";
+  selectedCat4.value = "";
+  doSearch();
+};
+const onCat2Change = () => {
+  selectedCat3.value = "";
+  selectedCat4.value = "";
+  doSearch();
+};
+const onCat3Change = () => {
+  selectedCat4.value = "";
+  doSearch();
+};
+const onCat4Change = () => {
+  doSearch();
+};
+
 const getSearchDB = () => {
-  if (searchDB) return Promise.resolve(searchDB); // 如果已经有了，直接返回
-  if (dbFetchPromise) return dbFetchPromise; // 如果正在下载中，返回同一个 Promise，让大家一起等，绝不重复发请求！
+  if (searchDB.value.length) return Promise.resolve(searchDB.value);
+  if (dbFetchPromise) return dbFetchPromise;
 
-  // 发起请求并上锁
   dbFetchPromise = fetch("/search-db.json")
     .then((res) => res.json())
     .then((data) => {
-      searchDB = data;
+      searchDB.value = data;
       return data;
     })
     .catch((err) => {
       console.error("获取搜索数据失败:", err);
-      dbFetchPromise = null; // 失败后把锁解开，允许重试
+      dbFetchPromise = null;
       return [];
     });
-
   return dbFetchPromise;
 };
 
-// 魔法优化：当用户一进入搜索页面，趁他打字的时间，偷偷在后台预加载数据！
 onMounted(() => {
   getSearchDB();
 });
 
 const doSearch = async () => {
-  if (!keyword.value.trim()) return;
+  const input = keyword.value.trim();
+  if (!input && !selectedCat1.value) return;
+
   isSearching.value = true;
   hasSearched.value = true;
   results.value = [];
 
-  // 延迟 50ms，让浏览器的 Loading 动画先渲染出来
   await new Promise((resolve) => setTimeout(resolve, 50));
-
-  // 等待数据库加载完成（如果预加载好了，这里是瞬间通过的）
   const db = await getSearchDB();
 
-  const kw = keyword.value.trim().toLowerCase();
+  const kws = input ? input.toLowerCase().split(/\s+/) : [];
   const tempResults = [];
 
-  // 简单粗暴但极速的遍历匹配
   for (const page of db) {
-    const titleMatch = page.title.toLowerCase().includes(kw);
-    const contentIndex = page.content.toLowerCase().indexOf(kw);
+    // 4级精准过滤
+    if (selectedCat1.value && page.cat1 !== selectedCat1.value) continue;
+    if (selectedCat2.value && page.cat2 !== selectedCat2.value) continue;
+    if (selectedCat3.value && page.cat3 !== selectedCat3.value) continue;
+    if (selectedCat4.value && page.cat4 !== selectedCat4.value) continue;
 
-    if (titleMatch || contentIndex > -1) {
-      // 截取匹配到的上下文片段（前后各取 50 个字）
+    const titleLower = page.title.toLowerCase();
+    const contentLower = page.content.toLowerCase();
+
+    const isMatch =
+      kws.length === 0 ||
+      kws.every((kw) => titleLower.includes(kw) || contentLower.includes(kw));
+
+    if (isMatch) {
+      let firstMatchIndex = -1;
+      for (const kw of kws) {
+        const idx = contentLower.indexOf(kw);
+        if (idx > -1) {
+          firstMatchIndex = idx;
+          break;
+        }
+      }
+
       let snippet = "";
-      if (contentIndex > -1) {
-        const start = Math.max(0, contentIndex - 30);
-        const end = Math.min(page.content.length, contentIndex + 60);
+      if (firstMatchIndex > -1) {
+        const start = Math.max(0, firstMatchIndex - 30);
+        const end = Math.min(page.content.length, firstMatchIndex + 60);
         snippet =
           (start > 0 ? "..." : "") + page.content.substring(start, end) + "...";
       } else {
@@ -99,6 +258,7 @@ const doSearch = async () => {
         title: page.title,
         link: page.link,
         snippet: snippet,
+        breadcrumb: page.breadcrumb,
       });
     }
   }
@@ -107,10 +267,12 @@ const doSearch = async () => {
   isSearching.value = false;
 };
 
-// 关键字标红高亮
 const highlight = (text) => {
-  if (!keyword.value) return text;
-  const reg = new RegExp(`(${keyword.value})`, "gi");
+  const input = keyword.value.trim();
+  if (!input) return text;
+  const kws = input.split(/\s+/);
+  const escapedKws = kws.map((kw) => kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const reg = new RegExp(`(${escapedKws.join("|")})`, "gi");
   return text.replace(
     reg,
     '<span style="color: #ff4a4a; font-weight: bold;">$1</span>',
@@ -119,56 +281,96 @@ const highlight = (text) => {
 </script>
 
 <style scoped>
+/* 强制显示全局滚动条，彻底解决闪烁问题 */
+:global(html) {
+  overflow-y: scroll !important;
+}
+
 .search-box {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 20px;
-
-  /* ================= 新增：吸顶魔法 ================= */
   position: sticky;
-  /* VitePress 顶部的导航栏默认高度是 64px，所以我们让它停在导航栏下面 */
   top: var(--vp-nav-height, 64px);
-  z-index: 10; /* 确保它浮在搜索结果上面 */
-  background-color: var(--vp-c-bg); /* 使用主题背景色，防止下面的文字透上来 */
-  padding: 15px 0 10px 0; /* 上下加点内边距，更好看 */
-  border-bottom: 1px solid var(--vp-c-divider); /* 加一条浅色底边线区分内容 */
-  /* ================================================== */
+  z-index: 10;
+  background-color: var(--vp-c-bg);
+  padding: 15px 0 10px 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+.category-select {
+  padding: 0 8px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  font-size: 13px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  height: 36px;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .search-input {
   flex: 1;
-  padding: 10px 15px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
+  min-width: 200px;
+  padding: 0 15px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  font-size: 15px;
   background: transparent;
   color: inherit;
+  height: 36px;
 }
+
 .search-btn {
   padding: 0 20px;
-  background: #3eaf7c;
+  background: var(--vp-c-brand);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  height: 36px;
 }
+
+/* 给结果区域一个最小高度，防止清空时页面塌陷 */
+.results-container {
+  min-height: 60vh;
+}
+
 .loading {
   margin: 20px 0;
-  font-size: 18px;
-  color: #666;
+  font-size: 16px;
+  color: var(--vp-c-text-2);
 }
 .result-info {
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 15px;
 }
 .result-item {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 15px;
   border-radius: 8px;
   background: var(--vp-c-bg-soft);
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.result-item:hover {
+  border-color: var(--vp-c-brand);
+}
+.result-breadcrumb {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  margin-bottom: 6px;
+  font-family: monospace;
 }
 .result-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   color: var(--vp-c-brand);
   text-decoration: none;
@@ -178,5 +380,18 @@ const highlight = (text) => {
   font-size: 14px;
   line-height: 1.6;
   color: var(--vp-c-text-2);
+}
+
+@media (max-width: 768px) {
+  .category-select {
+    max-width: calc(50% - 4px);
+    flex: 1;
+  }
+  .search-input {
+    width: 100%;
+  }
+  .search-btn {
+    width: 100%;
+  }
 }
 </style>

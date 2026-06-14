@@ -140,6 +140,25 @@ function cleanHtmlFile(filePath) {
     content: plainText,
   });
 
+  // ====== 修改：提取最多 4 级目录 ======
+  const pathParts = newRelativePath.split("/");
+  const cat1 = pathParts.length > 1 ? pathParts[0] : "其他";
+  const cat2 = pathParts.length > 2 ? pathParts[1] : "";
+  const cat3 = pathParts.length > 3 ? pathParts[2] : "";
+  const cat4 = pathParts.length > 4 ? pathParts[3] : "";
+  const breadcrumb = pathParts.slice(0, -1).join(" > ");
+
+  allPagesData.push({
+    title: pageTitle,
+    link: "/" + newRelativePath.replace(/\\/g, "/").replace(/\.md$/, ""),
+    content: plainText,
+    cat1: cat1,
+    cat2: cat2,
+    cat3: cat3,
+    cat4: cat4,
+    breadcrumb: breadcrumb,
+  });
+
   console.log(`✅ 已完美转换: ${newRelativePath}`);
 }
 
