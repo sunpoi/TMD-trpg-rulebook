@@ -131,16 +131,12 @@ function cleanHtmlFile(filePath) {
   const finalContent = `# ${pageTitle}\n\n${markdownContent}`;
   fs.writeFileSync(outPath, finalContent, "utf-8");
 
+  // 7. 提取纯文本，存入搜索数据库
   const plainText = markdownContent
     .replace(/[#*`>|]/g, "")
     .replace(/\s+/g, " ");
-  allPagesData.push({
-    title: pageTitle,
-    link: "/" + newRelativePath.replace(/\\/g, "/").replace(/\.md$/, ""),
-    content: plainText,
-  });
 
-  // ====== 修改：提取最多 4 级目录 ======
+  // 提取最多 4 级目录
   const pathParts = newRelativePath.split("/");
   const cat1 = pathParts.length > 1 ? pathParts[0] : "其他";
   const cat2 = pathParts.length > 2 ? pathParts[1] : "";
@@ -148,6 +144,7 @@ function cleanHtmlFile(filePath) {
   const cat4 = pathParts.length > 4 ? pathParts[3] : "";
   const breadcrumb = pathParts.slice(0, -1).join(" > ");
 
+  // ✅ 只保留这一个 push！
   allPagesData.push({
     title: pageTitle,
     link: "/" + newRelativePath.replace(/\\/g, "/").replace(/\.md$/, ""),

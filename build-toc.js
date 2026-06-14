@@ -42,6 +42,8 @@ function parseUL(ulElement) {
       const $nestedUl = $li.children("ul");
       if ($nestedUl.length > 0) {
         item.items = parseUL($nestedUl);
+        
+        item.collapsed = true;
       }
       items.push(item);
     });
