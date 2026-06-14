@@ -6,6 +6,22 @@ const cheerio = require("cheerio");
 const TurndownService = require("turndown");
 const turndownPluginGfm = require("turndown-plugin-gfm");
 
+// 核心：绝对安全的路径格式化函数
+function sanitizePath(p) {
+  let res = p;
+  try {
+    res = decodeURIComponent(res);
+  } catch (e) {}
+  res = res.replace(/\\/g, "/");
+  res = res.replace(/\s+\./g, "."); // 修复点前面的空格
+  res = res.replace(/\s+\//g, "/"); // 修复斜杠前后的空格
+  res = res.replace(/\/\s+/g, "/");
+  // 核弹级替换：只保留汉字、字母、数字、斜杠、点和连字符，其他全变下划线
+  res = res.replace(/[^\u4e00-\u9fa5a-zA-Z0-9\/\.\-]/g, "_");
+  res = res.replace(/_+/g, "_"); // 合并多个下划线
+  return res.toLowerCase(); // 终极杀招：全部转小写，彻底解决 Linux 404
+}
+
 // 配置路径
 const sourceDir = "./"; // 你的解压目录（当前目录）
 const outputDir = "./docs"; // 清洗后的输出目录（VitePress 默认使用 docs）
@@ -88,9 +104,7 @@ function cleanHtmlFile(filePath) {
   $("img").each((i, el) => {
     let src = $(el).attr("src");
     if (src && !src.startsWith("http") && !src.startsWith("data:")) {
-      src = src.replace(/\\/g, "/");
-      // ====== 新加：把图片路径里的空格和 %20 替换成下划线 ======
-      src = decodeURIComponent(src).replace(/\s+/g, "_");
+      src = sanitizePath(src); // 直接调用无菌化函数
       if (
         !src.startsWith("/") &&
         !src.startsWith("./") &&
@@ -99,6 +113,25 @@ function cleanHtmlFile(filePath) {
         src = "./" + src;
       }
       $(el).attr("src", src);
+    }
+  });
+
+  // 修复正文里的内部跳转链接 <a>
+  $("a").each((i, el) => {
+    let href = $(el).attr("href");
+    if (
+      href &&
+      !href.startsWith("http") &&
+      !href.startsWith("mailto:") &&
+      !href.startsWith("#")
+    ) {
+      let [pathPart, hashPart] = href.split("#");
+      if (pathPart) {
+        pathPart = sanitizePath(pathPart); // 直接调用无菌化函数
+        pathPart = pathPart.replace(/\.html?$/i, ".md"); // 把 .html 改成 .md
+      }
+      href = hashPart ? `${pathPart}#${hashPart}` : pathPart;
+      $(el).attr("href", href);
     }
   });
 
@@ -113,23 +146,10 @@ function cleanHtmlFile(filePath) {
 
   // 5. 准备输出路径
   const relativePath = path.relative(sourceDir, filePath);
-  let newRelativePath = relativePath.replace(/\.html?$/, ".md");
+  let newRelativePath = relativePath.replace(/\.html?$/i, ".md");
 
-  try {
-    newRelativePath = decodeURIComponent(newRelativePath);
-  } catch (e) {}
-
-  // 统一斜杠并去空格
-  newRelativePath = newRelativePath.replace(/\\/g, "/");
-  newRelativePath = newRelativePath
-    .split("/")
-    .map((part) => part.trim())
-    .join("/");
-
-  // 核弹级替换
-  newRelativePath = newRelativePath
-    .replace(/[^\u4e00-\u9fa5a-zA-Z0-9\/\.]/g, "_")
-    .replace(/_+/g, "_");
+  // 直接调用无菌化函数处理最终路径
+  newRelativePath = sanitizePath(newRelativePath);
 
   const outPath = path.join(outputDir, newRelativePath);
 
@@ -145,26 +165,27 @@ function cleanHtmlFile(filePath) {
   fs.writeFileSync(outPath, finalContent, "utf-8");
   console.log(`✅ 已完美转换: ${newRelativePath}`);
 
-  // ================= 修复的地方：提取纯文本存入数据库 =================
-  // 注意：这段代码必须放在 cleanHtmlFile 里面！
+  // ================= 提取纯文本存入数据库 =================
   const plainText = markdownContent
     .replace(/[#*`>|]/g, "")
     .replace(/\s+/g, " ");
 
   allPagesData.push({
     title: pageTitle,
-    link: "/" + newRelativePath.replace(/\\/g, "/").replace(/\.md$/, ""),
+    link: "/" + newRelativePath.replace(/\.md$/, ""),
     content: plainText,
   });
-  // ==================================================================
+  // ========================================================
 }
 
 // 复制图片的逻辑
 function copyFile(filePath) {
   const relativePath = path.relative(sourceDir, filePath);
-  // ====== 修改：把图片文件名和路径里的空格替换成下划线 ======
-  const newRelativePath = relativePath.replace(/\s+/g, "_");
-  const outPath = path.join(outputDir, relativePath);
+
+  // 直接调用无菌化函数处理图片路径
+  const newRelativePath = sanitizePath(relativePath);
+
+  const outPath = path.join(outputDir, newRelativePath);
   const outDirName = path.dirname(outPath);
   if (!fs.existsSync(outDirName)) {
     fs.mkdirSync(outDirName, { recursive: true });
