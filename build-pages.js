@@ -89,6 +89,8 @@ function cleanHtmlFile(filePath) {
     let src = $(el).attr("src");
     if (src && !src.startsWith("http") && !src.startsWith("data:")) {
       src = src.replace(/\\/g, "/");
+      // ====== 新加：把图片路径里的空格和 %20 替换成下划线 ======
+      src = decodeURIComponent(src).replace(/\s+/g, "_");
       if (
         !src.startsWith("/") &&
         !src.startsWith("./") &&
@@ -111,7 +113,9 @@ function cleanHtmlFile(filePath) {
 
   // 5. 准备输出路径
   const relativePath = path.relative(sourceDir, filePath);
-  const newRelativePath = relativePath.replace(/\.html?$/, ".md");
+  const newRelativePath = relativePath
+    .replace(/\.html?$/, ".md")
+    .replace(/\s+/g, "_");
   const outPath = path.join(outputDir, newRelativePath);
 
   const outDirName = path.dirname(outPath);
@@ -142,7 +146,9 @@ function cleanHtmlFile(filePath) {
 
 // 复制图片的逻辑
 function copyFile(filePath) {
-  const relativePath = path.relative(sourceDir, filePath);
+  const relativePath = path.relative(sourceDir, filePath); 
+  // ====== 修改：把图片文件名和路径里的空格替换成下划线 ======
+  const newRelativePath = relativePath.replace(/\s+/g, "_");
   const outPath = path.join(outputDir, relativePath);
   const outDirName = path.dirname(outPath);
   if (!fs.existsSync(outDirName)) {

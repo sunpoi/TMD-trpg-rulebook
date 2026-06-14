@@ -28,10 +28,14 @@ function parseUL(ulElement) {
 
         // 如果有 Local 属性，说明是一个具体的页面
         if (local) {
-            // 简单处理一下路径，把空格 %20 替换回来，或者做其他格式化
-            item.link = '/' + decodeURIComponent(local);
-        }
+            // 1. 先把可能存在的 %20 解码成空格
+            let cleanLocal = decodeURIComponent(local);
+            // 2. 把所有的空格替换成下划线 _
+            cleanLocal = cleanLocal.replace(/\s+/g, '_');
 
+            item.link = '/' + cleanLocal;
+        }
+        
         // 检查是否有嵌套的子目录 (UL)
         const $nestedUl = $li.children('ul');
         if ($nestedUl.length > 0) {
