@@ -1,0 +1,59 @@
+/* =======================================================
+   突破 VitePress 官方 5 级目录深度限制（全功能修复版）
+   ======================================================= */
+
+/* 1. 复活深层级的折叠按钮点击区域 (.action) */
+[class*="level-6"] > .item > .action,
+[class*="level-7"] > .item > .action,
+[class*="level-8"] > .item > .action,
+[class*="level-9"] > .item > .action {
+  display: flex !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* 2. 确保小箭头图标在这个区域内正常显示 */
+[class*="level-6"] > .item > .action .caret,
+[class*="level-7"] > .item > .action .caret,
+[class*="level-8"] > .item > .action .caret,
+[class*="level-9"] > .item > .action .caret {
+  display: block !important;
+}
+
+/* 3. 修复点击展开后，子目录的缩进和左侧边框（就像前5级一样完美缩进） */
+[class*="level-6"] > .items {
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
+  margin-left: 16px;
+}
+[class*="level-7"] > .items {
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
+  margin-left: 16px;
+}
+[class*="level-8"] > .items {
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
+  margin-left: 16px;
+}
+[class*="level-9"] > .items {
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
+  margin-left: 16px;
+}
+
+/* 4. （可选）为深层文本保留一点左侧内边距，防挤压 */
+[class*="level-6"] > .item > .text,
+[class*="level-7"] > .item > .text,
+[class*="level-8"] > .item > .text {
+  padding-right: 24px; /* 防止文本太长挡住右侧的折叠按钮 */
+  white-space: normal;
+  line-height: 1.4;
+}

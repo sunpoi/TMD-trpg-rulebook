@@ -5,6 +5,7 @@ const cheerio = require("cheerio");
 const TurndownService = require("turndown");
 const turndownPluginGfm = require("turndown-plugin-gfm");
 
+// 初始化 Turndown
 const turndownService = new TurndownService({
   headingStyle: "atx",
   codeBlockStyle: "fenced",
@@ -16,6 +17,18 @@ turndownService.addRule("unwrapGarbage", {
     return content;
   },
 });
+
+// ================= 新加：强制拦截所有图片，注入懒加载和异步解码 =================
+turndownService.addRule("lazyLoadImages", {
+  filter: "img",
+  replacement: function (content, node) {
+    const src = node.getAttribute("src") || "";
+    const alt = node.getAttribute("alt") || "";
+    // 直接返回一段强化的 HTML 图片标签，顺便加上防溢出的 css 样式
+    return `\n<img src="${src}" alt="${alt}" loading="lazy" decoding="async" style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0;" />\n`;
+  },
+});
+// ==============================================================================
 
 const sourceDir = "./";
 const outputDir = "./docs";
