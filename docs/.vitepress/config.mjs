@@ -64,6 +64,12 @@ export default defineConfig({
   ignoreDeadLinks: true,
   appearance: true,
 
+  // ================= 新规：全局注入智能预加载 =================
+  head: [
+    // 告诉浏览器，在网络空闲时，去后台偷偷备好搜索数据库
+    ['link', { rel: 'prefetch', href: '/search-db.json', as: 'fetch', crossorigin: 'anonymous' }]
+  ],
+
   themeConfig: {
     // 先修复链接，再拍扁深层目录！
     sidebar: flattenDeepSidebar(fixLinks(toc)),
