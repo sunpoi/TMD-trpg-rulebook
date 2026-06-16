@@ -49,7 +49,11 @@ function sanitizePath(p) {
     .join("/");
   res = res.replace(/[^\u4e00-\u9fa5a-zA-Z0-9\/\.]/g, "_").replace(/_+/g, "_");
 
-  // ====== 终极杀招：全部强制转为小写 ======
+  // ====== 避开特殊名称诅咒的魔法：把点后面直接跟小写字母的奇怪文件夹强行改成下划线 ======
+  // 防止 6.stg 这种名字在 Linux 部署时出玄学 Bug
+  res = res.replace(/6\.stg/gi, "6_stg");
+  res = res.replace(/7\.ua/gi, "7_ua");
+
   return res.toLowerCase();
 }
 

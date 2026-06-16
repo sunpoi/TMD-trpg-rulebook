@@ -8522,34 +8522,34 @@
     "items": [
       {
         "text": "1.诗歌塔",
-        "link": "/6.stg/1.诗歌塔.html"
+        "link": "/6_stg/1.诗歌塔.html"
       },
       {
         "text": "2.FAQ",
-        "link": "/6.stg/2.faq.html"
+        "link": "/6_stg/2.faq.html"
       },
       {
         "text": "3.ST守则与ST开团指南",
-        "link": "/6.stg/3.st守则与st开团指南.htm"
+        "link": "/6_stg/3.st守则与st开团指南.htm"
       },
       {
         "text": "4.艺术性语言入门手册",
-        "link": "/6.stg/4.艺术性语言入门手册.htm"
+        "link": "/6_stg/4.艺术性语言入门手册.htm"
       },
       {
         "text": "5.STG",
-        "link": "/6.stg/5.stg.html"
+        "link": "/6_stg/5.stg.html"
       },
       {
         "text": "6.TMD能力组",
-        "link": "/6.stg/6.tmd能力组.html"
+        "link": "/6_stg/6.tmd能力组.html"
       },
       {
         "text": "6.0.蔽空阴云",
         "items": [
           {
             "text": "6.0.蔽空阴云",
-            "link": "/6.stg/6.0.蔽空阴云/6.0.蔽空阴云.html"
+            "link": "/6_stg/6.0.蔽空阴云/6.0.蔽空阴云.html"
           }
         ],
         "collapsed": true
@@ -8559,11 +8559,11 @@
         "items": [
           {
             "text": "新秩序",
-            "link": "/6.stg/6.1.新秩序/新秩序.html"
+            "link": "/6_stg/6.1.新秩序/新秩序.html"
           },
           {
             "text": "新秩序：更新记录",
-            "link": "/6.stg/6.1.新秩序/新秩序_更新记录.html"
+            "link": "/6_stg/6.1.新秩序/新秩序_更新记录.html"
           }
         ],
         "collapsed": true
@@ -8573,11 +8573,11 @@
         "items": [
           {
             "text": "勿忘尘",
-            "link": "/6.stg/6.2.勿忘尘/勿忘尘.htm"
+            "link": "/6_stg/6.2.勿忘尘/勿忘尘.htm"
           },
           {
             "text": "勿忘尘：更新记录",
-            "link": "/6.stg/6.2.勿忘尘/勿忘尘_更新记录.html"
+            "link": "/6_stg/6.2.勿忘尘/勿忘尘_更新记录.html"
           }
         ],
         "collapsed": true
@@ -8587,11 +8587,11 @@
         "items": [
           {
             "text": "灵魂蓝调",
-            "link": "/6.stg/6.3.灵魂蓝调/灵魂蓝调.html"
+            "link": "/6_stg/6.3.灵魂蓝调/灵魂蓝调.html"
           },
           {
             "text": "灵魂蓝调：更新记录",
-            "link": "/6.stg/6.3.灵魂蓝调/灵魂蓝调_更新记录.html"
+            "link": "/6_stg/6.3.灵魂蓝调/灵魂蓝调_更新记录.html"
           }
         ],
         "collapsed": true
@@ -8601,11 +8601,11 @@
         "items": [
           {
             "text": "9.汹涌疾风：更新记录",
-            "link": "/6.stg/6.4.汹涌疾风/9.汹涌疾风_更新记录.html"
+            "link": "/6_stg/6.4.汹涌疾风/9.汹涌疾风_更新记录.html"
           },
           {
             "text": "汹涌疾风",
-            "link": "/6.stg/6.4.汹涌疾风/汹涌疾风.html"
+            "link": "/6_stg/6.4.汹涌疾风/汹涌疾风.html"
           }
         ],
         "collapsed": true
@@ -8615,11 +8615,11 @@
         "items": [
           {
             "text": "9.新世短歌：更新记录",
-            "link": "/6.stg/6.5新世短歌/9.新世短歌_更新记录_.html"
+            "link": "/6_stg/6.5新世短歌/9.新世短歌_更新记录_.html"
           },
           {
             "text": "新世短歌",
-            "link": "/6.stg/6.5新世短歌/新世短歌.html"
+            "link": "/6_stg/6.5新世短歌/新世短歌.html"
           }
         ],
         "collapsed": true
@@ -8629,11 +8629,11 @@
         "items": [
           {
             "text": "开发者对谈1：新药旧症",
-            "link": "/6.stg/6.6.开发者访谈/开发者对谈1_新药旧症.htm"
+            "link": "/6_stg/6.6.开发者访谈/开发者对谈1_新药旧症.htm"
           },
           {
             "text": "开发者对谈2：青梅煮酒",
-            "link": "/6.stg/6.6.开发者访谈/开发者对谈2_青梅煮酒.htm"
+            "link": "/6_stg/6.6.开发者访谈/开发者对谈2_青梅煮酒.htm"
           }
         ],
         "collapsed": true
@@ -8643,15 +8643,15 @@
         "items": [
           {
             "text": "鲸的个人车怪指南和一点碎碎念",
-            "link": "/6.stg/6.7.怪物手册/鲸的个人车怪指南和一点碎碎念.html"
+            "link": "/6_stg/6.7.怪物手册/鲸的个人车怪指南和一点碎碎念.html"
           },
           {
             "text": "鲸的怪物图鉴",
-            "link": "/6.stg/6.7.怪物手册/鲸的怪物图鉴.html"
+            "link": "/6_stg/6.7.怪物手册/鲸的怪物图鉴.html"
           },
           {
             "text": "恋人的怪物手册",
-            "link": "/6.stg/6.7.怪物手册/恋人的怪物手册.html"
+            "link": "/6_stg/6.7.怪物手册/恋人的怪物手册.html"
           }
         ],
         "collapsed": true
@@ -8664,22 +8664,22 @@
     "items": [
       {
         "text": "0.写在前面",
-        "link": "/7.ua/0.写在前面.html"
+        "link": "/7_ua/0.写在前面.html"
       },
       {
         "text": "2.训练及血统",
         "items": [
           {
             "text": "黑道发展路线",
-            "link": "/7.ua/2.训练及血统/黑道发展路线.html"
+            "link": "/7_ua/2.训练及血统/黑道发展路线.html"
           },
           {
             "text": "荧光（训练）",
-            "link": "/7.ua/2.训练及血统/荧光_训练_.html"
+            "link": "/7_ua/2.训练及血统/荧光_训练_.html"
           },
           {
             "text": "这辈子有了",
-            "link": "/7.ua/2.训练及血统/这辈子有了.html"
+            "link": "/7_ua/2.训练及血统/这辈子有了.html"
           }
         ],
         "collapsed": true
@@ -8689,7 +8689,7 @@
         "items": [
           {
             "text": "金钟罩",
-            "link": "/7.ua/3.功法及改造/金钟罩.html"
+            "link": "/7_ua/3.功法及改造/金钟罩.html"
           }
         ],
         "collapsed": true
@@ -8702,19 +8702,19 @@
             "items": [
               {
                 "text": "暴走轻机枪",
-                "link": "/7.ua/4.物品与装备/1.武器/暴走轻机枪.html"
+                "link": "/7_ua/4.物品与装备/1.武器/暴走轻机枪.html"
               },
               {
                 "text": "井盖",
-                "link": "/7.ua/4.物品与装备/1.武器/井盖.html"
+                "link": "/7_ua/4.物品与装备/1.武器/井盖.html"
               },
               {
                 "text": "浪人剑（隋刃）",
-                "link": "/7.ua/4.物品与装备/1.武器/浪人剑_隋刃_.html"
+                "link": "/7_ua/4.物品与装备/1.武器/浪人剑_隋刃_.html"
               },
               {
                 "text": "死神终临",
-                "link": "/7.ua/4.物品与装备/1.武器/死神终临.html"
+                "link": "/7_ua/4.物品与装备/1.武器/死神终临.html"
               }
             ],
             "collapsed": true
@@ -8724,11 +8724,11 @@
             "items": [
               {
                 "text": "黑背心（护身宝甲）",
-                "link": "/7.ua/4.物品与装备/2.防具/黑背心_护身宝甲_.html"
+                "link": "/7_ua/4.物品与装备/2.防具/黑背心_护身宝甲_.html"
               },
               {
                 "text": "秦铁甲",
-                "link": "/7.ua/4.物品与装备/2.防具/秦铁甲.html"
+                "link": "/7_ua/4.物品与装备/2.防具/秦铁甲.html"
               }
             ],
             "collapsed": true
@@ -8738,7 +8738,7 @@
             "items": [
               {
                 "text": "见崎鸣的义眼（单只）",
-                "link": "/7.ua/4.物品与装备/3.奇物/见崎鸣的义眼_单只_.html"
+                "link": "/7_ua/4.物品与装备/3.奇物/见崎鸣的义眼_单只_.html"
               }
             ],
             "collapsed": true
@@ -8748,7 +8748,7 @@
             "items": [
               {
                 "text": "5-4型重型动力作战服",
-                "link": "/7.ua/4.物品与装备/4.载具/5_4型重型动力作战服.html"
+                "link": "/7_ua/4.物品与装备/4.载具/5_4型重型动力作战服.html"
               }
             ],
             "collapsed": true
@@ -8758,7 +8758,7 @@
             "items": [
               {
                 "text": "ZECT蚁兵",
-                "link": "/7.ua/4.物品与装备/5.套装/zect蚁兵.html"
+                "link": "/7_ua/4.物品与装备/5.套装/zect蚁兵.html"
               }
             ],
             "collapsed": true
