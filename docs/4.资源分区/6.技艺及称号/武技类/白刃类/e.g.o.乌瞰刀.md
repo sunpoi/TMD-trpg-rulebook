@@ -1,13 +1,19 @@
 # E.G.O.乌瞰刀
 
-<table class="bannerparthead"><tbody><tr id="hdr"><td class="runninghead" nowrap="">TMD：汹涌疾风029特别节愚人版</td></tr></tbody></table>
+<table class="bannerparthead"><tbody><tr id="hdr"><td class="runninghead" nowrap="">TMD：绯红庆典041</td></tr></tbody></table>
 
 # E.G.O.乌瞰刀
 
-E.G.O.乌瞰刀  
-ZAYIN级  
-D+500  
-“告诉我你为‘理想’作何定义。”  
+名称：E.G.O.乌瞰刀  
+等级：ZAYIN级  
+本质：特异本质  
+分类：技艺  
+价格：D+500  
+动作：标准动作  
+描述：  
+“告诉我你为‘理想’作何定义。”
+
+效果：  
 解析等级I：  
 当你进行一种你已有的白刃标准动作攻击时，你可以消耗3点意志，这次攻击将附带E.G.O.乌瞰刀。  
 仅这一次攻击期间，你的武器将转变为由漆黑的鸦羽构成，一切数据不变，在攻击后将绽放出飞舞的黑羽，这次攻击后，持续到你的下个回合行动开始前，你的先攻提升16点。

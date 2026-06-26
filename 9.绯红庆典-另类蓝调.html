@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绯红庆典 - 另类蓝调</title>
+    <style>
+        /* ================= 基础页面与排版（强行覆盖老旧CSS） ================= */
+        body {
+            font-family: 'Georgia', 'Kaiti SC', 'STKaiti', 'AR PL UKai CN', 'KaiTi', serif !important;
+            font-size: 24px !important;
+            line-height: 1.8 !important;
+            color: #2c2e35 !important;
+            background-color: #f8f9fa !important; /* 极浅的高级灰白底色 */
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px) !important; /* 极淡的点状网格背景，增加质感 */
+            background-size: 30px 30px !important;
+            margin: 0 !important;
+            padding: 40px 20px 80px 20px !important;
+            word-wrap: break-word;
+        }
+
+        .container {
+            max-width: 1000px !important;
+            margin: 0 auto !important;
+            background: rgba(255, 255, 255, 0.8) !important; /* 给主体加一个微透的白底，文字更清晰 */
+            padding: 40px !important;
+            border-radius: 12px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03) !important;
+        }
+
+        /* ================= 头部诗歌与宣言 ================= */
+        .page-title { text-align: center; margin-bottom: 70px; }
+        .page-title h1 {
+            color: #8b1c24 !important;
+            font-size: 60px !important;
+            letter-spacing: 8px !important;
+            margin-bottom: 15px !important;
+            font-weight: normal !important;
+            text-shadow: 2px 4px 10px rgba(139, 28, 36, 0.2) !important;
+        }
+        .page-title .subtitle {
+            color: #1e3a5f !important;
+            font-size: 32px !important;
+            letter-spacing: 4px !important;
+            display: block;
+        }
+
+        .poem { text-align: center; margin-bottom: 70px; }
+        .poem p { margin: 10px 0 !important; }
+        .poem .en {
+            font-family: 'Georgia', serif !important;
+            font-style: italic !important;
+            color: #888 !important;
+            font-size: 28px !important;
+        }
+        .poem .zh {
+            color: #111 !important;
+            font-size: 36px !important;
+            font-weight: bold !important;
+            letter-spacing: 2px !important;
+            margin-bottom: 35px !important;
+        }
+
+        .divider {
+            border: 0; height: 1px;
+            background: linear-gradient(to right, transparent, #8b1c24, transparent);
+            margin: 60px 0;
+        }
+
+        .prologue {
+            font-size: 28px !important;
+            line-height: 2 !important;
+            text-align: justify;
+            margin-bottom: 50px;
+        }
+        .prologue p { margin: 20px 0 !important; }
+        .punchline {
+            font-weight: bold !important;
+            color: #8b1c24 !important;
+            font-size: 32px !important;
+        }
+
+        .toast {
+            text-align: center;
+            font-size: 30px !important;
+            font-weight: bold !important;
+            color: #1e3a5f !important;
+            margin-top: 60px;
+            letter-spacing: 4px !important;
+            line-height: 2 !important;
+        }
+
+        /* ================= 留言板区域与塔罗牌特效 ================= */
+        .contributors-intro {
+            font-size: 22px !important;
+            color: #666 !important;
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: 2px !important;
+        }
+
+        .message-list { margin: 0; padding: 0; }
+
+        /* 留言正文统一样式 */
+        .message-list dd {
+            margin: 15px 0 60px 0 !important;
+            padding-left: 25px !important;
+            color: #444 !important;
+            font-size: 24px !important;
+            line-height: 1.8 !important;
+        }
+
+        /* 防剧透黑幕 */
+        .spoiler {
+            background-color: #222 !important;
+            color: transparent !important;
+            cursor: pointer;
+            padding: 0 4px !important;
+            transition: color 0.3s ease;
+        }
+        .spoiler:hover, .spoiler:active { color: #fff !important; }
+
+        /* ---------- 塔罗牌名字徽章特效 (Game UI Style) ---------- */
+        .message-list dt {
+            font-size: 26px !important;
+            font-weight: bold !important;
+            display: inline-block !important; /* 做成徽章块 */
+            padding: 6px 16px !important;
+            border-radius: 4px !important;
+            margin-top: 20px;
+        }
+
+        /* 0. 魔术师：星空渐变字 + 紫色微光 */
+        .ar-magician {
+            background: linear-gradient(135deg, #6b21a8, #3b82f6) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(107, 33, 168, 0.4) !important;
+            border: none !important;
+            border-radius: 6px !important;
+        }
+        .ar-magician + dd { border-left: 4px solid #6b21a8 !important; }
+
+        /* 2. 【逆位】女祭司：深海蓝银，神秘下划线 */
+        .ar-priestess {
+            color: #e2e8f0 !important;
+            background-color: #0f172a !important; /* 黑蓝色底 */
+            border-left: 4px solid #94a3b8 !important;
+            box-shadow: 2px 2px 10px rgba(15, 23, 42, 0.3) !important;
+        }
+        .ar-priestess + dd { border-left: 4px solid #0f172a !important; }
+
+        /* 3. 【逆位】皇后：荆棘般的猩红双线边框 */
+        .ar-empress {
+            color: #9f1239 !important;
+            border-top: 2px solid #9f1239 !important;
+            border-bottom: 2px solid #9f1239 !important;
+            background: rgba(159, 18, 57, 0.05) !important;
+        }
+        .ar-empress + dd { border-left: 4px double #9f1239 !important; }
+
+        /* 9. 【逆位】隐者：风化消散感，灰色虚线 */
+        .ar-hermit {
+            color: #94a3b8 !important;
+            letter-spacing: 6px !important;
+            border: 1px dashed #cbd5e1 !important;
+            opacity: 0.8 !important;
+        }
+        .ar-hermit + dd { border-left: 4px dotted #cbd5e1 !important; color: #777 !important; }
+
+        /* 8. 力量：炽热金橙渐变，充满压迫感 */
+        .ar-strength {
+            background: linear-gradient(to right, #ea580c, #f59e0b) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4) !important;
+            border-left: 6px solid #9a3412 !important; /* 左侧加一条暗红加深边缘 */
+            font-size: 30px !important;
+        }
+        .ar-strength + dd { border-left: 4px solid #ea580c !important; }
+        /* 15. 【逆位】恶魔：深红警示，黑底红字 */
+        .ar-devil {
+            color: #ef4444 !important;
+            background-color: #171717 !important;
+            border-right: 8px solid #b91c1c !important;
+            letter-spacing: 4px !important;
+        }
+        .ar-devil + dd { border-left: 4px solid #171717 !important; }
+
+        /* 16. 高塔：断裂感，明黄与黑色对比 */
+        .ar-tower {
+            color: #111 !important;
+            background: #fde047 !important;
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); /* 切角特效 */
+        }
+        .ar-tower + dd { border-left: 4px solid #fde047 !important; }
+
+        /* 6. 【逆位】恋人：浪漫玫瑰色，柔和圆角 */
+        .ar-lovers {
+            color: #be185d !important;
+            background: #fdf2f8 !important;
+            border-radius: 20px !important;
+            border: 1px solid #fbcfe8 !important;
+        }
+        .ar-lovers + dd { border-left: 4px solid #fbcfe8 !important; }
+
+        /* 17. 星星：青空般的光辉 */
+        .ar-star {
+            color: #0284c7 !important;
+            text-shadow: 0 0 15px rgba(2, 132, 199, 0.4) !important;
+            border-bottom: 2px dashed #7dd3fc !important;
+        }
+        .ar-star + dd { border-left: 4px solid #7dd3fc !important; }
+
+        /* ==== 小阿卡纳（四元素牌组统一样式） ==== */
+        /* 宝剑 (Swords)：风元素，银色/冰蓝，锐利 */
+        .ar-swords {
+            color: #334155 !important;
+            background: linear-gradient(to right, #e2e8f0, transparent) !important;
+            border-left: 4px solid #64748b !important;
+        }
+        .ar-swords + dd { border-left: 4px solid #cbd5e1 !important; }
+
+        /* 星币 (Pentacles)：土元素，翡翠绿与大地金 */
+        .ar-pentacles {
+            color: #166534 !important;
+            border-bottom: 3px solid #f59e0b !important;
+            background: rgba(22, 101, 52, 0.05) !important;
+        }
+        .ar-pentacles + dd { border-left: 4px solid #166534 !important; }
+
+        /* 权杖 (Wands)：火元素，木色与火焰橙 */
+        .ar-wands {
+            color: #9a3412 !important;
+            border-left: 6px solid #d97706 !important;
+            background: linear-gradient(to right, rgba(217, 119, 6, 0.1), transparent) !important;
+        }
+        .ar-wands + dd { border-left: 4px solid #d97706 !important; }
+
+        /* 圣杯 (Cups)：水元素，海浪蓝，波浪下划线 */
+        .ar-cups {
+            color: #0369a1 !important;
+            text-decoration: underline wavy #38bdf8 !important;
+            text-underline-offset: 8px !important;
+        }
+        .ar-cups + dd { border-left: 4px solid #38bdf8 !important; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 顶部标题 -->
+    <header class="page-title">
+        <h1>绯红庆典</h1>
+        <span class="subtitle">—— 另类蓝调 ——</span>
+    </header>
+
+    <!-- 诗歌部分 -->
+    <section class="poem">
+        <p class="en">I’ll wake up in a new life</p>
+        <p class="zh">我将开启新的生活</p>
+
+        <p class="en">down by the *suicide*</p>
+        <p class="zh">以“自我毁灭”的方式</p>
+
+        <p class="en">I’ll wake up in a new life</p>
+        <p class="zh">我将醒来，如同新生</p>
+
+        <p class="en">down by the seaside</p>
+        <p class="zh">于恬静海边</p>
+
+        <p class="en">Down by the suicide</p>
+        <p class="zh">于毁灭之际</p>
+
+        <p class="en">DOWN BY THE *SEASIDE*</p>
+        <p class="zh">于灰域之涯</p>
+    </section>
+
+    <!-- 分隔线 -->
+    <hr class="divider">
+
+    <!-- 序言宣言 -->
+    <section class="prologue">
+        <p>另类蓝调（Second Blues）不是一个真正意义上的大版本，但它是TMD2.0划时代的开端。</p>
+        <p>还未做完的工作堆积如山，未能来得及说完的话如鲠在喉，飘在风中的遗憾念念不忘。</p>
+        <p>但它们早已不再重要。</p>
+        <p>无论是在城市中生活还是在迁徙中落脚，<br>
+           <span class="punchline">如果还有火药，请给我火。</span></p>
+    </section>
+
+    <!-- 祝酒词 -->
+    <section class="toast">
+        为了另类蓝调，<br>
+        为了四月暴风雪。<br>
+        请期待未来吧。
+    </section>
+
+    <hr class="divider">
+
+    <!-- 参与者留言版 -->
+    <section class="contributors">
+        <p class="contributors-intro">★ 以下为041版本整体重修的参与者及其致辞（以下排名不分先后） ★</p>
+
+        <dl class="message-list">
+
+            <dt class="ar-magician">魔术师</dt>
+            <dd>Не дожить,не допеть,не дает этот город уснуть.</dd>
+
+            <dt class="ar-priestess">【逆位】女祭司</dt>
+            <dd>私密马赛，一个人橄榄整个修改组——</dd>
+
+            <dt class="ar-empress">【逆位】皇后</dt>
+            <dd>愿你历尽千帆，归来仍是萝莉、猫娘、美少女<br>
+以及，能不能来个人把心像的技艺给写了</dd>
+
+            <dt class="ar-hermit">【逆位】隐者</dt>
+            <dd>玩的开心，这就足够了</dd>
+
+            <dt class="ar-strength">力量</dt>
+            <dd>
+                柔腕锁凶狮，<br>
+                静气凝神万念息，<br>
+                凑齐5个字，<span class="spoiler">心归本我时。</span><br>
+                遗失之物不一定真的遗失了，试着用勇气和毅力去追回它们吧。
+            </dd>
+
+            <dt class="ar-devil">【逆位】恶魔</dt>
+            <dd>我的言语无人在乎，直到春雨洗净的五月，在无人的旷野，我将鸣叫。</dd>
+
+            <dt class="ar-tower">高塔</dt>
+            <dd>虽然新版本什么都没有做，但还是辛苦我自己了。</dd>
+
+            <dt class="ar-lovers">【逆位】恋人</dt>
+            <dd>无惧月黑夜的迫近，当夏夜归来，月华终再度悬于夜空</dd>
+
+            <dt class="ar-star">星星</dt>
+            <dd>够了，我倦了。笔端所述已成定论，而我的功绩会在这行文字之后显现。——《司辰之书》</dd>
+
+            <!-- 小阿卡纳 -->
+            <dt class="ar-swords">宝剑-1</dt>
+            <dd>来杯咖啡不加糖，再浇上浓浓的咖啡萃取液，最后再来一份额外的咖啡萃取液——哦先生，这得清醒到明天</dd>
+
+            <dt class="ar-pentacles">星币-11（侍从）</dt>
+            <dd>不以物喜，不以己悲。<br>惩前毖后，居安思危。</dd>
+
+            <dt class="ar-wands">权杖-3</dt>
+            <dd>我曾来过。</dd>
+
+            <dt class="ar-wands">权杖-13（王后）</dt>
+            <dd>我在人群中寻找答案，答案在人海中漂流<br>我在人海中沉沦，我在人海中浮起，我在人间飘荡</dd>
+
+            <dt class="ar-wands">权杖-14（国王）</dt>
+            <dd>总而言之，就是言而总之，啊对，就先这样，在这样，最后那样，就可以完成了。</dd>
+
+            <dt class="ar-cups">圣杯-7</dt>
+            <dd>大家一起努力的氛围真好，珍惜当下，过好每一天。</dd>
+
+        </dl>
+    </section>
+
+</div>
+
+</body>
+</html>

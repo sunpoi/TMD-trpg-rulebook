@@ -1,46 +1,283 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML xmlns:o = 
-"urn:schemas-microsoft-com:office:office"><HEAD><title>3.DP转换</title>
-<META content="text/html; charset=gb2312" http-equiv=Content-Type>
-<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK rel=stylesheet 
-href="_template.css"></HEAD>
-<BODY>
-<DIV id=nsbanner>
-<DIV id=bannerrow1>
-<TABLE class=bannerparthead>
-  <TBODY>
-  <TR id=hdr>
-    <TD class=runninghead noWrap>TMD：新秩序006</TD></TR></TBODY></TABLE></DIV>
-<DIV id=titlerow>
-<H1 class=dtH1>DP转换</H1></DIV></DIV>
-<DIV id=nstext><BR>
-<P><FONT size=2>※转化对应表&nbsp;<BR><BR>1DP=1任意检定加值=1防御（任意类型，包括盔甲、格挡、掩蔽等）=意志、强韧、反射豁免检定各+1=单项豁免检定+2。<BR>1DP=扩大3点通用能量池<BR>2DP=1.5武器伤害提升（不含税）<BR>1DP=1高速/破甲=1破魔=1威猛&nbsp;&nbsp;但4DP=5某种破防（已含税）<BR>1DP=2先攻<BR></FONT><FONT size=2>1.5DP=1瞄准上限（含税）&nbsp;<BR>1DP=增加某个医疗类能力的8点医疗点数。&nbsp;<BR>1DP=5声望<BR></FONT><FONT size=2>2DP=1点机运骰加值
-<BR>1DP=3虚拟体积（不提供生命值）
-<br>4DP=1全检定加值=5外貌（1dp=1外貌，满4送1），这一特性的税会在每购买3点全检定加值时一并收取
-<br>3dp=熔毁2（含税），每购买4点熔毁送1点。
-<br>3dp=1点意志力用法为检定提供的加值提升
-<br>3dp=攻击命中后1点意志力流失
-<br>1dp=1点任意能量流失=4点指定能量流失
-<br>6dp=5点指定破防属性，若该破防属性结算后仍有剩余则转化为攻击上的xx加值，至多转化5点。
-<br>1dp=3点指定破防属性转化（在进行攻击前指定一种破防属性将其转化为另一种破防属性）
-<br>1dp=2抵消破甲/高速/破魔/威猛
-1dp=抵消2点在范围攻击中避开单位时需受到的减值
-<BR>在DP转换过程中，对于以上特性每有3DP被用于同种散特性可购买的能力中（如攻击DP，防御等，不包括提升属性、瞄准上限、扩大能量池、声望）就需抽走1DP税<BR><BR>—————————————————<BR><BR><BR>3DP=1附加成功=1.5生命上限=1.5意志池上限=1.5临时生命（默认一场景刷新）=1招架伤害抵消=1快速治疗（并自带12点医疗点数）=0.75全伤害吸收=0.75异常点数吸收=1.2DR/-=1.2全能量抗力=2.5单能量抗力=2某类型物理伤害吸收=1.5DR/某类型（DR/魔法可以视为2.5，因为法破特性太便宜了）=1.2封闭=1吸血<BR>6DP=1异常点治疗（并自带24点医疗点数）<BR><BR>3DP=提升1技能等级</FONT></P>
-<P><FONT size=2><BR>1韧性伤害=1.5严重伤害，将1点严重伤害转为韧性为3DP。&nbsp;&nbsp;<BR>
-<BR>2DP=基因锁其中一个骰子加1成功数<BR>
-<br>2.5dp=1近战伤害吸收=1远程伤害吸收
-<br>3dp=2点指定异常点数恢复（医疗点12）
-<br>1dp=每场景一次，忍耐2点指定异常点数至战斗结束后生效
-<BR>2.5DP=1体积
-<br>2dp=狂怒1
-<br>3DP=1点某伤害性质易伤
-<br>2dp=1点伤害降低一级 （冲击-严重-韧性）
-<br>3dp=1点活体护甲
-<br>3dp=2点抵消意志力流失效果
-<BR>对于以上特性每有1个同级特性被用于同种散特性可购买的能力中（包括全吸收、生命等，不包括提升技能、外貌，载具模板购买体积无需交税），就需抽走1DP税。特殊的是购买附加成功、伤害、异常点无需抽税
-<br>
-<BR><BR>————————————————<BR>放弃韧性槽，将生命槽转化组织度/结构值免费,转化为1.5倍生命值的结构值18dp（12税）&nbsp;
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>DP转换</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type"/>
+<meta content="MSHTML 11.00.10570.1001" name="GENERATOR"/>
+<link href="_template.css" rel="stylesheet"/>
+<style>
+p {
+    line-height: 1.5em;  /* 应用行间距 */
+}
+</style>
+</head>
+<body>
+<div id="nsbanner">
+<div id="bannerrow1">
+<table class="bannerparthead">
+<tbody>
+<tr id="hdr">
+<td class="runninghead" nowrap="">TMD：绯红庆典：另类蓝调041</td></tr></tbody></table></div>
+<div id="titlerow">
+<h1 class="dtH1">3.DP转换</h1></div></div>
+<div id="nstext">
+<p><font size="2">DP转换如下表：</font></p>
+<table border="1">
+    <tr>
+        <td>DP转换方式</td>
+        <td>价值 </td>
+    </tr>
+    <tr>
+        <td>1任意检定加值</td>
+        <td>1DP</td>
+    </tr>
+    <tr>
+        <td>1防御（任意类型）</td>
+        <td>1DP</td>
+    </tr>
+    <tr>
+        <td>1武器伤害</td>
+        <td>1.33DP</td>
+    </tr>
+    <tr>
+        <td>1破防</td>
+        <td>1DP</td>
+    </tr>
+    <tr>
+        <td>2先攻</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>1瞄准上限</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>某快速医疗能力获得8快疗点</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>1机运检定加值</td>
+        <td>2DP</td>
+    </tr>
+	<tr>
+        <td>3虚拟体积</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>1点意志力用法为检定提供的加值提升</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>攻击命中后1点意志力流失</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1点任意能量流失（也等于4点指定能量流失）</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>3点指定破防属性转化</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>2抵消破甲/高速/破魔/威猛</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>抵消2点在范围攻击中避开单位时需受到的减值</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>2点某豁免检定加值（或三豁免各1点加值）</td>
+        <td>1DP</td>
+    </tr>
+</table>
+<BR>三一税是指上表DP转换中任意一项转换每花费总计3DP时，需支付1DP作为税收。若两连续等级之间也达到3DP，则正常在达到的等级交税。
+<BR>
+<BR><table border="1">
+    <tr>
+        <td>DP转换方式</td>
+        <td>价值 </td>
+    </tr>
+    <tr>
+        <td>1.5生命上限</td>
+        <td>3DP</td>
+    </tr>
+    <tr>
+        <td>1.5意志上限</td>
+        <td>3DP</td>
+    </tr>
+    <tr>
+        <td>1.5临时生命（默认一场景刷新）</td>
+        <td>3DP</td>
+    </tr>
+    <tr>
+        <td>1招架伤害抵消</td>
+        <td>3DP</td>
+    </tr>
+    <tr>
+        <td>1快速治疗（并自带12点医疗点数）</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>0.75全伤害吸收</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>0.75异常点数吸收</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1.2DR/-</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1.2全能量抗力</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>2.5单能量抗力</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>2某类型物理伤害吸收</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1.5DR/某类型</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1.2封闭</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1吸血</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1异常点治疗（并自带24点医疗点数）</td>
+        <td>6DP</td>
+    </tr>
+	<tr>
+        <td>基因锁其中一个骰子加1成功数</td>
+        <td>2DP</td>
+    </tr>
+	<tr>
+        <td>1点严重伤害转为等量韧性伤害</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>每场景一次，忍耐2点指定异常点数至战斗结束后</td>
+        <td>1DP</td>
+    </tr>
+	<tr>
+        <td>2点指定异常点数恢复（医疗点12）</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1近战伤害吸收（也等于1远程伤害吸收）</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1体积</td>
+        <td>2.5DP</td>
+    </tr>
+	<tr>
+        <td>狂怒1</td>
+        <td>2DP</td>
+    </tr>
+	<tr>
+        <td>1点某伤害性质易伤</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1点伤害降低一级 （韧性-严重-冲击）</td>
+        <td>2DP</td>
+    </tr>
+	<tr>
+        <td>2点抵消意志力流失效果</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1点活体护甲</td>
+        <td>3DP</td>
+    </tr>
+	<tr>
+        <td>1根可用肢体</td>
+        <td>3DP</td>
+    </tr>
+</table>
+<BR>同特税是指上表DP转换中任意一项转换每花费总计1同级特性的DP时，需支付1DP作为税收。若两连续等级之间也达到该等级的同级特性，则正常在达到的等级交税。
+<BR>
+<BR><BR><table border="1">
+    <tr>
+        <td>DP转换方式</td>
+        <td>价值</td>
+        <td>备注</td>
+    </tr>
+    <tr>
+        <td>扩大3点通用能量池（需规定种类）</td>
+        <td>1DP</td>
+        <td>不交税（下同）</td>
+    </tr>
+    <tr>
+        <td>1附加成功</td>
+        <td>3DP</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>熔毁2（每购买4点熔毁再送1点）</td>
+        <td>2DP</td>
+        <td>2-</td>
+    </tr>
+    <tr>
+        <td>5声望</td>
+        <td>1DP</td>
+        <td>-</td>
+    </tr>
+	<tr>
+        <td>5点某类型破防</td>
+        <td>4DP</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>1全检定加值（也等于5外貌，1DP=1外貌，满4送1）</td>
+        <td>4DP</td>
+        <td>每购买3点全检定加值时交1DP税</td>
+    </tr>
+	<tr>
+        <td>附带1点一档异常点数</td>
+        <td>2DP</td>
+        <td>购买异常点数时，可以根据画风选择异常点数的来源。<BR>否则异常点数均为默认的创伤/影响心灵/环境来源。（下同）</td>
+    </tr>
+	<tr>
+        <td>附带1点二档异常点数</td>
+        <td>3DP</td>
+        <td>-</td>
+    </tr>
+	<tr>
+        <td>附带1点三档异常点数</td>
+        <td>4DP</td>
+        <td>-</td>
+    </tr>
+	<tr>
+        <td>附带1点不可豁免一档异常点数</td>
+        <td>4DP</td>
+        <td>-</td>
+    </tr>
+	<tr>
+        <td>附带1点不可豁免二档异常点数</td>
+        <td>6DP</td>
+        <td>-</td>
+    </tr>
+	<tr>
+        <td>附带1点不可豁免三档异常点数</td>
+        <td>8DP</td>
+        <td>-</td>
+    </tr>
+</table>
 <BR><BR></FONT><FONT size=2>速度与射程计算：<BR></P></FONT>
 <P>
 <TABLE class=MsoNormal 
@@ -527,11 +764,10 @@ cellPadding=0 border=1>
 <BR>2、对于远程而言，每在模板的基础射程上增加1个基础射程，就需要相当于3DP的特性；或者根据物品等级查找DP换算射程表，获得的射程取高。特殊的，对于步枪和狙击枪无法3DP增加1个基础射程，而是被1DP=10米的买法取代。<BR>3、对于近战而言，根据资源等级查找DP换算射程表。 
 <BR>4、对于可以影响一定范围的能力而言，其能力的范围购买方式为：线形（或者宽度为1米的长方形）=1倍同级射程的长度；扇形、锥形（或者宽度不大于长度一半的长方形）=0.5倍同级射程的半径（或长度），圆形（或者宽度大于等于长度一半的长方形）=0.25倍同级射程的半径（或长度）。举例而言，A级的一个影响范围能力，可以花费1DP购买20米线形长度，或者10米锥形半径，或者5米圆形半径。 
 <BR>在圆形的基础上，每支付3DP，可以让数值上升一档（即在1/4圆形时支付2DP，可以换成数值1/2的圆形，再支付3DP可以变为该数值的圆形）；此外，如果这个效果是对队友使用的buff，则该数值每有12DP，就要额外支付1DP税。对于持续时间达到一定程度（也即是说，可以通过多次施展来达到实质上作用于多个单位目的）的能力，也需要依照此方式购买范围。</FONT></P>
-<P><FONT size=2></FONT>&nbsp;</P></DIV>
-<DIV id=nstext>
-<HR>
-</DIV>
-<DIV class=footer>
-<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright ? 2022 <A 
-href="http://www.goddessfantasy.net/bbs/index.php?board=2008.0" 
-target=_blank>TMDtrpg制作组</A>. All Rights Reserved. </P></DIV></BODY></HTML>
+<hr/>
+</div>
+<div class="footer">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright ? 2025 <a href="http://www.goddessfantasy.net/bbs/index.php?board=2008.0" target="_blank">TMDtrpg制作组</a>. All Rights Reserved.</p>
+</div>
+</body>
+</html>

@@ -1,13 +1,13 @@
 # 英雄宴（Hero's Feast）
 
-<table class="bannerparthead"><tbody><tr id="hdr"><td class="runninghead" nowrap="">TMD：新世短歌035</td></tr></tbody></table>
+<table class="bannerparthead"><tbody><tr id="hdr"><td class="runninghead" nowrap="">TMD：绯红庆典041</td></tr></tbody></table>
 
 # 英雄宴（Hero's Feast）
 
-英雄宴（Hero's Feast）  
+英雄宴（Hero's Feast）  
 等级：D  
 价格：D+500  
-能耗：2点   
+能耗：2点  
 施法时间：10分钟  
 施法距离：10米  
 法术成分：言语，姿势、材料（一个贵重的碗）  

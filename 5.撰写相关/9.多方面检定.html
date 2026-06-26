@@ -1,0 +1,102 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>多方面检定</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type"/>
+<meta content="MSHTML 11.00.10570.1001" name="GENERATOR"/>
+<link href="_template.css" rel="stylesheet"/>
+<style>
+p {
+    line-height: 1.5em;  /* 应用行间距 */
+}
+</style>
+</head>
+<body>
+<div id="nsbanner">
+<div id="bannerrow1">
+<table class="bannerparthead">
+<tbody>
+<tr id="hdr">
+<td class="runninghead" nowrap="">TMD：绯红庆典041</td></tr></tbody></table></div>
+<div id="titlerow">
+<h1 class="dtH1">9.多方面检定</h1></div></div>
+<div id="nstext">
+<p><font size="2">多方面检定</p><p>若对多方面（即多个属性和技能）判定皆有加值的，判断所需花费的DP方式为：<br/>
+取所有多方面中价值最高的一项支付全额DP，次高、第三高、第四高支付的DP减半，此后每三项再减半。当DP均相等的情况下，项数为无穷时支付的DP是一项的四倍。 同时在涉及需要抽税的时候，税也按照对应方面排序减半。</p><p>如果需要将DP转为数量相等的多方面检定，也具有自上方公式推得的一个简单算法：从单方面开始，每多1个判定或受益面，就会具有一个乘数，如下表：
+<BR><table border="1">
+    <tr>
+        <td>方面数</td>
+        <td>乘数</td>
+    </tr>
+    <tr>
+	<tr>
+        <td>2方面</td>
+        <td>0.665</td>
+    </tr>
+        <td>3方面</td>
+        <td>0.5</td>
+    </tr>
+    <tr>
+        <td>4方面</td>
+        <td>0.4</td>
+    </tr>
+    <tr>
+        <td>5方面</td>
+        <td>0.36</td>
+    </tr>
+    <tr>
+        <td>6方面</td>
+        <td>0.33</td>
+    </tr>
+	<tr>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+	<tr>
+        <td>全方面</td>
+        <td>0.25</td>
+    </tr>
+</table>
+</p><p>一般来说，假如一个特性增加了多个检定，且所有的检定使用的专业都是不同的，且这些判定方面不会同时生效的，那么可以将其认为是多方面检定。<br/>
+其适用范围可以推算至不同的攻击方式与豁免检定等。<br/>
+例如，某个特性增加三种不同技能检定，则可以将其认定为一个3方面检定；或者一个特性增加三种不同类型的抗力，也可以认为其是一个三方面检定。<br/>
+这些判定方面需是不能同时生效的，若同时生效则按照分配DP或者向下拆分特性计算。比如你无法将一个C级6DP的特性写为增加施法和攻击各4DP，或增加智力、学识、攻击各3DP。一般来说，只要增加了防御，那么它一定不是个多方面检定（因为防御是全时生效的）。替换检定、增加属性或技能无论如何不认为是一个多方面检定，因为它们也极有可能同时生效。<br/>
+特别的，对于具有医疗点的能力而言，使用多方面买法需要共享这些能力的医疗点，其医疗点的上限取高计算。</p><p>此外，无法同时使用，但可切换的“选择一种效果获得”的多个不同特性同样遵循此规则。<br/>
+这将被称为具有【发动频率】，对于具有发动频率的多个可切换能力而言，这些能力不能获得难易权值，而是按照下表参考进行计算：
+<BR><table border="1">
+    <tr>
+        <td>发动频率</td>
+        <td>除值</td>
+    </tr>
+    <tr>
+	<tr>
+        <td>一轮</td>
+        <td>0</td>
+    </tr>
+        <td>一场景</td>
+        <td>0.1</td>
+    </tr>
+    <tr>
+        <td>一小时</td>
+        <td>0.25</td>
+    </tr>
+    <tr>
+        <td>一日</td>
+        <td>0.5</td>
+    </tr>
+    <tr>
+        <td>一影片</td>
+        <td>1</td>
+    </tr>
+</table>
+</p><p>具有发动频率的多方面计算公式为：<br/>
+除主方面外，其余具有发动频率的方面：<br/>
+原方面总DP在计算多方面后/（1+发动频率带来的除值）</p><p>具有发动频率的多方面可以使用动作权值。</font></p>
+<hr/>
+</div>
+<div class="footer">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright ? 2025 <a href="http://www.goddessfantasy.net/bbs/index.php?board=2008.0" target="_blank">TMDtrpg制作组</a>. All Rights Reserved.</p>
+</div>
+</body>
+</html>
