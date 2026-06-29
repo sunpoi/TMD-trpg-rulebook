@@ -114,6 +114,10 @@
 		<param name="Local" value="1.基础规则/1.核心规则/1.9.资源与本质.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.Fangire">
+		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/Fangire/1.Fangire.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="1.Try another story">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/Try%20another%20story/1.Try%20another%20story.html">
 		</OBJECT>
@@ -128,6 +132,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="1.暗黑地牢能力组">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/黑暗地牢能力组/1.暗黑地牢能力组.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.百世诗篇">
+		<param name="Local" value="4.资源分区/1.血统与训练/2.社交类/百世诗篇/1.百世诗篇.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="1.超古代暗之巨人">
@@ -158,6 +166,10 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/5.通用类/黑岩射手-意象战场/1.黑岩射手-意象战场.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.黄金裔-金织-浪漫之泰坦">
+		<param name="Local" value="4.资源分区/1.血统与训练/1.生理类/黄金裔-金织-浪漫之泰坦/1.黄金裔-金织-浪漫之泰坦.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="1.极速者">
 		<param name="Local" value="4.资源分区/1.血统与训练/1.生理类/极速者/1.极速者.html">
 		</OBJECT>
@@ -176,6 +188,14 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="1.偶像">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/偶像/1.偶像.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.破甲打击（撰写范例）">
+		<param name="Local" value="5.撰写相关/13.撰写范例/1.破甲打击（撰写范例）.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="1.人格面具">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/1.人格面具.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="1.人机改-器官">
@@ -298,6 +318,10 @@
 		<param name="Local" value="1.基础规则/2.建卡相关/2.1.建立人物卡以继续游戏.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.10.扮演分">
+		<param name="Local" value="1.基础规则/2.建卡相关/2.10.扮演分.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="2.2.范例空白卡">
 		<param name="Local" value="1.基础规则/2.建卡相关/2.2.范例空白卡.html">
 		</OBJECT>
@@ -378,6 +402,10 @@
 		<param name="Local" value="1.基础规则/2.建卡相关/2.9.初装/2.9.5午夜.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.Fangire下属技能">
+		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/Fangire/2.Fangire下属技能.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="2.FAQ">
 		<param name="Local" value="6.STG/2.FAQ.html">
 		</OBJECT>
@@ -426,6 +454,10 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/1.生理类/极速者/2.极速者下属技能树.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.将光阴织成黄金">
+		<param name="Local" value="4.资源分区/1.血统与训练/1.生理类/黄金裔-金织-浪漫之泰坦/2.将光阴织成黄金.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="2.魔法少女Serica下属技能树">
 		<param name="Local" value="4.资源分区/1.血统与训练/1.生理类/魔法少女Serica/2.魔法少女Serica下属技能树.html">
 		</OBJECT>
@@ -434,12 +466,20 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/5.通用类/工厂猎人训练/2.内脏暴击.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.人格面具技能综述">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/2.人格面具技能综述.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="2.人机改-躯体">
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/人机改/2.人机改-躯体.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="2.十字军技能树">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/黑暗地牢能力组/2.十字军技能树.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="2.铁之心，石之花（撰写范例）">
+		<param name="Local" value="5.撰写相关/13.撰写范例/2.铁之心，石之花（撰写范例）.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="2.下属装备">
@@ -542,6 +582,10 @@
 		<param name="Local" value="1.基础规则/3.战斗规则/3.18.随从与召唤物.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.19.射程规则">
+		<param name="Local" value="1.基础规则/3.战斗规则/3.19.射程规则.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="3.2.战斗流程">
 		<param name="Local" value="1.基础规则/3.战斗规则/3.2.战斗流程.html">
 		</OBJECT>
@@ -598,6 +642,10 @@
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/4.综合类/地狱纳米辅助改造：奥西里斯/3.单兵防护装置：海底两万里.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.辅助系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/3.辅助系.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="3.黑王冠下属武器—慈悲愿景">
 		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/黑王冠/3.黑王冠下属武器—慈悲愿景.html">
 		</OBJECT>
@@ -618,8 +666,16 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/4.综合类/千禧骑士/武器/3.生之欲.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.吾等的梦醒之泪（撰写范例）">
+		<param name="Local" value="5.撰写相关/13.撰写范例/3.吾等的梦醒之泪（撰写范例）.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="3.武装">
 		<param name="Local" value="4.资源分区/1.血统与训练/1.生理类/超古代暗之巨人/3.武装.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="3.衣匠">
+		<param name="Local" value="4.资源分区/1.血统与训练/1.生理类/黄金裔-金织-浪漫之泰坦/3.衣匠.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="3.翼族人">
@@ -662,6 +718,10 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/偶像/4.【偶像下属技能（感性系）】.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.长夜狼咆（撰写范例）">
+		<param name="Local" value="5.撰写相关/13.撰写范例/4.长夜狼咆（撰写范例）.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="4.炽焰天穹周边吧唧系列">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/炽焰天穹/4.炽焰天穹周边吧唧系列.html">
 		</OBJECT>
@@ -680,6 +740,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="4.黑王冠下属资源——奇物">
 		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/黑王冠/4.黑王冠下属资源——奇物.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="4.恢复系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/4.恢复系.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="4.魔法专长">
@@ -1118,12 +1182,20 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/武技类/EGO共鸣：振翅%20.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="EGO装备">
-		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/EGO装备.html">
+		<param name="Name" value="EGO装备·歌唱机">
+		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/EGO装备·歌唱机.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="EGO装备·面壁女">
 		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/EGO装备·面壁女.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ERROR">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/5.通用类/ERROR.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Exceed-阿拉贝">
+		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/Transcend%20Fate/Exceed-阿拉贝.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Exceed-赤潮">
@@ -1138,8 +1210,12 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/Transcend%20Fate/Exceed-海燕.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Exceed-塞壬">
-		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/Transcend%20Fate/Exceed-塞壬.html">
+		<param name="Name" value="Exceed-千年虫">
+		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/Transcend%20Fate/Exceed-千年虫.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="exceed-塞壬">
+		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/Transcend%20Fate/exceed-塞壬.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Exceed-山火">
@@ -1152,10 +1228,6 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Exceed-走蛇">
 		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/Transcend%20Fate/Exceed-走蛇.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Fangire">
-		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/Fangire.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Gear—背德之炎">
@@ -1172,6 +1244,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="kiva">
 		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/假面骑士Kiva/kiva.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="kiva辅助装备">
+		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/假面骑士Kiva/kiva辅助装备.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="kiva下属技艺">
@@ -1394,6 +1470,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/〇飘飘奶茶杯.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="阿拜多斯临战武装下属技艺和道具">
+		<param name="Local" value="4.资源分区/7.物品与装备/9.消耗品/6.系列消耗品/阿拜多斯临战武装下属技艺和道具.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="阿蒙的单片眼镜">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/阿蒙的单片眼镜.html">
 		</OBJECT>
@@ -1562,10 +1642,6 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/学识类/百日筑基/百日筑基下属技艺.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="百世诗篇">
-		<param name="Local" value="4.资源分区/1.血统与训练/2.社交类/百世诗篇.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="斑纹">
 		<param name="Local" value="4.资源分区/6.技艺及称号/武技类/白刃类/全集中呼吸法/斑纹.html">
 		</OBJECT>
@@ -1658,6 +1734,10 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/北境极光的魔女-涅血.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="背棺人">
+		<param name="Local" value="4.资源分区/1.血统与训练/4.综合类/背棺人.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="被遗忘的风与花">
 		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/被遗忘的风与花.html">
 		</OBJECT>
@@ -1694,8 +1774,16 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/9.消耗品/0.无支线/兵粮丸.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="冰冻系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/冰冻系.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="冰封刘德华">
 		<param name="Local" value="4.资源分区/6.技艺及称号/杂项/冰封刘德华.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="冰凝剑">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/近战武器/6.可升级/冰凝剑.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="冰枪">
@@ -1836,6 +1924,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="超辣热狗套餐">
 		<param name="Local" value="4.资源分区/7.物品与装备/9.消耗品/0.无支线/超辣热狗套餐.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="朝花夕拾">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/朝花夕拾.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="嘲笑命运之骰">
@@ -1998,6 +2090,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/2.C级/带羽毛的帽子.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="单蛇之杖">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/单蛇之杖.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="弹簧陷阱">
 		<param name="Local" value="4.资源分区/7.物品与装备/3.防具/7.可升级/弹簧陷阱.html">
 		</OBJECT>
@@ -2080,6 +2176,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="电光人">
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/电光人.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="电击系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/电击系.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="电流核心">
@@ -2258,6 +2358,10 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/6.一次性血统/封剑烙印.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="封印之杖">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/封印之杖.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="风暴刃">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/7.系列物品/战灰/风暴刃.html">
 		</OBJECT>
@@ -2418,6 +2522,14 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/FATE能力组/固有结界.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="怪盗">
+		<param name="Local" value="4.资源分区/1.血统与训练/5.通用类/怪盗/怪盗.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="怪盗下属技能树">
+		<param name="Local" value="4.资源分区/1.血统与训练/5.通用类/怪盗/怪盗下属技能树.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="怪力">
 		<param name="Local" value="4.资源分区/7.物品与装备/7.载具及随从/随从/7.系列随从/宝可梦系列/1.宝可梦/怪力.html">
 		</OBJECT>
@@ -2494,6 +2606,14 @@
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/4.综合类/鬼/鬼下属技艺血鬼术-上弦之五.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="鬼下属技艺血鬼术-特殊的鬼">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/4.综合类/鬼/鬼下属技艺血鬼术-特殊的鬼.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="鬼下属技艺血鬼术-下弦之二">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/4.综合类/鬼/鬼下属技艺血鬼术-下弦之二.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="鬼下属技艺血鬼术-下弦之一">
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/4.综合类/鬼/鬼下属技艺血鬼术-下弦之一.html">
 		</OBJECT>
@@ -2560,6 +2680,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="核能电器">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/核能电器.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="核热系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/核热系.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="和平使者柯尔特">
@@ -2794,6 +2918,10 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/3.心智类/绘者/绘者下属技能树.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="魂力">
+		<param name="Local" value="4.资源分区/5.能量池/魂力.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="浑天宝鉴">
 		<param name="Local" value="4.资源分区/2.改造与功法/功法/浑天宝鉴/浑天宝鉴.html">
 		</OBJECT>
@@ -2832,6 +2960,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="火焰大王">
 		<param name="Local" value="4.资源分区/1.血统与训练/5.通用类/火焰大王.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="火焰系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/火焰系.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="惑血之酒">
@@ -2914,8 +3046,16 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/杂项/肌肉大猩猩.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="疾风系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/疾风系.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="疾风指环">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/1.D级/疾风指环.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="几何剑术">
+		<param name="Local" value="4.资源分区/6.技艺及称号/武技类/白刃类/几何剑术.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="寂静之缠布">
@@ -3186,10 +3326,6 @@
 		<param name="Local" value="5.撰写相关/趁手工具/科学计算器.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="可以成为mama的专属巧克力">
-		<param name="Local" value="4.资源分区/7.物品与装备/9.消耗品/0.无支线/可以成为mama的专属巧克力.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="克林特·巴顿的复合弓">
 		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/远程武器/6.可升级/克林特·巴顿的复合弓.html">
 		</OBJECT>
@@ -3216,6 +3352,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="空中元素固定装置">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/2.C级/空中元素固定装置.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="恐惧">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/恐惧.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="口袋树海">
@@ -3434,6 +3574,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/灵药角尊.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="灵子薄雾">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/1.D级/灵子薄雾.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="琉沙之刃">
 		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/近战武器/6.可升级/琉沙之刃.html">
 		</OBJECT>
@@ -3548,6 +3692,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="抡语">
 		<param name="Local" value="4.资源分区/6.技艺及称号/武技类/肉搏类/抡语.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="轮回者手表插件">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/7.系列物品/轮回者手表插件.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="轮椅">
@@ -3706,10 +3854,6 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/明心诀.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="名称：轮回者手表插件">
-		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/名称：轮回者手表插件.html">
-		</OBJECT>
-	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="命定风暴">
 		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/近战武器/6.可升级/命定风暴.html">
 		</OBJECT>
@@ -3756,6 +3900,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="魔法少女Darkness">
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/4.综合类/魔法少女Darkness.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="魔法少女杀手">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/5.通用类/魔法少女杀手.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="魔法少女伊奈叶">
@@ -3844,6 +3992,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="魔女因子">
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/3.心智类/魔女因子.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="魔枪潘多拉">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/远程武器/7.系列武器/魔枪潘多拉.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="魔神Z系列">
@@ -3950,12 +4102,20 @@
 		<param name="Local" value="4.资源分区/5.能量池/念.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="念动系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/念动系.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="娘化剑术">
 		<param name="Local" value="4.资源分区/6.技艺及称号/杂项/娘化剑术.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="凝视">
 		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/凝视.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="凝血剂">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/近战武器/6.可升级/凝血剂.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="扭蛋术">
@@ -4078,6 +4238,10 @@
 		<param name="Local" value="4.资源分区/5.能量池/气.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="气血战魂">
+		<param name="Local" value="4.资源分区/1.血统与训练/4.综合类/气血战魂.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="气驭短兵">
 		<param name="Local" value="4.资源分区/6.技艺及称号/能量类/气驭短兵.html">
 		</OBJECT>
@@ -4088,6 +4252,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="弃牌作战书页">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/司书战斗手册/体系书页/弃牌/弃牌作战书页.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="千相之器·无我之形">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/千相之器·无我之形.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="千愿之冠">
@@ -4140,6 +4308,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="枪火交织">
 		<param name="Local" value="4.资源分区/6.技艺及称号/武技类/白刃类/枪火交织.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="枪击系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/枪击系.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="枪刃使">
@@ -4290,6 +4462,14 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/如意劲.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="入神坐照">
+		<param name="Local" value="4.资源分区/6.技艺及称号/能量类/入神坐照.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="瑞莱的冰晶节杖">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/瑞莱的冰晶节杖.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="瑞士糖">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/7.系列物品/六一纪念-糖果罐/瑞士糖.html">
 		</OBJECT>
@@ -4414,6 +4594,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/社畜的工资卡.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="身如离弦之物">
+		<param name="Local" value="4.资源分区/6.技艺及称号/武技类/身如离弦之物.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="深海猎人（Abyssal Hunters）">
 		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/深海猎人（Abyssal%20Hunters）.html">
 		</OBJECT>
@@ -4438,6 +4622,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/7.载具及随从/载具/1.D级/神威战马.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="神仙索（原化记版）">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/1.D级/神仙索（原化记版）.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="神行甲马">
 		<param name="Local" value="4.资源分区/7.物品与装备/9.消耗品/0.无支线/神行甲马.html">
 		</OBJECT>
@@ -4446,12 +4634,24 @@
 		<param name="Local" value="4.资源分区/3.瞳术/神虚视.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="生得术式 不义游戏">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/生得术式/生得术式%20不义游戏.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="生得术式 赤血操术">
-		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/生得术式%20赤血操术.html">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/生得术式/生得术式%20赤血操术.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="生得术式 火">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/生得术式/生得术式%20火.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="生得术式 十划咒法">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/生得术式/生得术式%20十划咒法.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="生得术式 无下限">
-		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/生得术式%20无下限.html">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/生得术式/生得术式%20无下限.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="生日蛋糕">
@@ -4511,11 +4711,15 @@
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="诗剑：青天揽月">
-		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/近战武器/7.系列武器/诗剑/诗剑：青天揽月.html">
+		<param name="Local" value="4.资源分区/1.血统与训练/2.社交类/百世诗篇/2.诗剑/诗剑：青天揽月.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="诗剑：人间正道">
-		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/近战武器/7.系列武器/诗剑/诗剑：人间正道.html">
+		<param name="Local" value="4.资源分区/1.血统与训练/2.社交类/百世诗篇/2.诗剑/诗剑：人间正道.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="诗剑：夜阑碧光">
+		<param name="Local" value="4.资源分区/1.血统与训练/2.社交类/百世诗篇/2.诗剑/诗剑：夜阑碧光.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="诗人的竖琴">
@@ -4540,6 +4744,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="时光守护者">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/时光守护者.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="时光之杖">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/时光之杖.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="时间流民">
@@ -4706,6 +4914,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/4.A级/死亡笔记.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="死亡水晶">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/2.C级/死亡水晶.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="死者视界">
 		<param name="Local" value="4.资源分区/3.瞳术/死者视界.html">
 		</OBJECT>
@@ -4724,6 +4936,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="四柱之枪—救世主">
 		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/近战武器/6.可升级/四柱之枪—救世主.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="饲主">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/饲主.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="送葬人">
@@ -5230,6 +5446,10 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/杂项/午夜赐福.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="物理系">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/人格面具/5.攻击系/物理系.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="物灵士">
 		<param name="Local" value="4.资源分区/1.血统与训练/6.一次性血统/物灵士.html">
 		</OBJECT>
@@ -5502,6 +5722,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/醒酒毡.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="幸运马蹄铁">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/幸运马蹄铁.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="汹涌疾风">
 		<param name="Local" value="6.STG/6.4.汹涌疾风/汹涌疾风.html">
 		</OBJECT>
@@ -5582,6 +5806,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/7.系列物品/战灰/血刃.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="血肉法杖">
+		<param name="Local" value="4.资源分区/7.物品与装备/2.武器/魔法武器/6.可升级/血肉法杖.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="血色披风">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/3.B级/血色披风.html">
 		</OBJECT>
@@ -5612,6 +5840,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="血族">
 		<param name="Local" value="4.资源分区/1.血统与训练/5.通用类/血族.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="巡于蓝空的白云">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/4.A级/巡于蓝空的白云.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="训练家">
@@ -5668,6 +5900,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="炎蔷薇徽章">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/3.B级/炎蔷薇徽章.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="炎拳事务所【幸存者】">
+		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/炎拳事务所【幸存者】.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="炎之呼吸">
@@ -6014,6 +6250,10 @@
 		<param name="Local" value="4.资源分区/1.血统与训练/2.社交类/云君遗脉.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="云气武将">
+		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/云气武将.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="云游图鉴">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/1.D级/云游图鉴.html">
 		</OBJECT>
@@ -6028,6 +6268,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="载具基础驾驶指南">
 		<param name="Local" value="4.资源分区/6.技艺及称号/器用类/载具基础驾驶指南.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="在？养些猴子不？">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/0.无支线/在？养些猴子不？.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="在那燃烧的血肉之下的影">
@@ -6066,8 +6310,16 @@
 		<param name="Local" value="4.资源分区/6.技艺及称号/射击类/战场统治者.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="战姬绝唱-核心">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/6.一次性改造/战姬绝唱-核心.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="战甲旋风">
 		<param name="Local" value="4.资源分区/6.技艺及称号/器用类/战甲旋风.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="战力数学">
+		<param name="Local" value="4.资源分区/6.技艺及称号/杂项/战力数学.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="战争之王">
@@ -6128,6 +6380,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="阵营技能">
 		<param name="Local" value="4.资源分区/6.技艺及称号/通用及综合类/FATE能力组/阵营技能.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="蒸汽核心">
+		<param name="Local" value="4.资源分区/2.改造与功法/改造/1.生理类/蒸汽核心.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="正阳灵掌">
@@ -6318,6 +6574,10 @@
 		<param name="Local" value="4.资源分区/7.物品与装备/9.消耗品/1.D级/诅咒之影.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="组合剑：鬼王">
+		<param name="Local" value="4.资源分区/7.物品与装备/6.套装/组合剑：鬼王.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="醉拳">
 		<param name="Local" value="4.资源分区/6.技艺及称号/武技类/肉搏类/醉拳.html">
 		</OBJECT>
@@ -6364,6 +6624,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="咫尺天涯">
 		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/2.C级/咫尺天涯.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="骥驹过膝">
+		<param name="Local" value="4.资源分区/7.物品与装备/4.奇物/2.C级/骥驹过膝.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="璀璨明星">
